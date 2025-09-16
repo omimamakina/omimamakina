@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Omima Makina</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     :root {
       --sari: #f1c40f;
@@ -160,6 +161,21 @@
       color: #aaa;
       font-size: 0.9rem;
     }
+.social-icons {
+  text-align: center;
+  margin-top: 20px;
+}
+.social-icons a {
+  margin: 0 10px;
+  font-size: 1.8rem;
+  color: var(--sari);
+  transition: color 0.3s, transform 0.3s;
+}
+.social-icons a:hover {
+  color: white;
+  transform: scale(1.2);
+}
+
   </style>
 </head>
 <body>
@@ -222,7 +238,12 @@
   </section>
 
   <footer>
-    © 2025 Omima Makina | Tüm Hakları Saklıdır
-  </footer>
+  <div class="social-icons">
+    <a href="https://instagram.com/omimamakina" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="mailto:info@omima.com.tr"><i class="fas fa-envelope"></i></a>
+    <a href="tel:+905356860848"><i class="fas fa-phone"></i></a>
+  </div>
+  © 2025 Omima Makina | Tüm Hakları Saklıdır
+</footer>
 </body>
 </html>

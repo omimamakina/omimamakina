@@ -89,9 +89,17 @@ body {
   color: white;
 }
 
+body {
+  margin: 0;
+  font-family: 'Orbitron', sans-serif;
+  background: #111;   /* siyah ana zemin */
+  color: white;
+  position: relative;
+}
+
 body::before {
   content: "";
-  position: absolute;
+  position: fixed;   /* kaydırınca da arkada kalır */
   top: 0;
   left: 0;
   width: 120%;
@@ -99,7 +107,7 @@ body::before {
   background: #f1c40f;
   clip-path: polygon(0 0, 100% 0, 70% 100%, 0% 100%);
   animation: shapeShift 6s ease-in-out infinite alternate;
-  z-index: -1;
+  z-index: -1; /* içerik üstte kalsın */
 }
 
 @keyframes shapeShift {
@@ -110,6 +118,7 @@ body::before {
     clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
   }
 }
+
 
 
     header {

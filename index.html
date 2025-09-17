@@ -152,15 +152,13 @@ body .triangle3 {
       top: 0;
       z-index: 1000;
     }
-   header img {
-  height: 120px;       /* Daha büyük logo */
-  max-height: none;    
-  transition: transform 0.4s ease;
-}
-
-header img:hover {
-  transform: rotate(-3deg) scale(1.1);
-}
+   header img { height: 250px; 
+               /* daha büyük görünmesi için artırıldı */ 
+               max-height: 18vh;
+               /* ekran yüksekliğine göre orantılı */ 
+               transition: transform 0.4s ease; } 
+   header img:hover { transform: rotate(-5deg) scale(1.05);
+                    }
 
     nav a {
       margin: 0 15px;

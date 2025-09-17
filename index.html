@@ -82,20 +82,35 @@
 body {
   margin: 0;
   font-family: 'Orbitron', sans-serif;
-  background: 
-    url('https://www.transparenttextures.com/patterns/carbon-fibre.png'),
-    linear-gradient(-45deg, #111 10%, #222 25%, #444 45%, #ba9709 20%, #f1c40f 35%);
-  background-size: auto, 400% 400%;
-  animation: gradientBG 12s ease infinite;
+  height: 100vh;
+  background: #111;
+  position: relative;
+  overflow: hidden;
   color: white;
 }
 
-
-@keyframes gradientBG {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 120%;
+  height: 120%;
+  background: #f1c40f;
+  clip-path: polygon(0 0, 100% 0, 70% 100%, 0% 100%);
+  animation: shapeShift 6s ease-in-out infinite alternate;
+  z-index: -1;
 }
+
+@keyframes shapeShift {
+  0% {
+    clip-path: polygon(0 0, 100% 0, 70% 100%, 0% 100%);
+  }
+  100% {
+    clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
+  }
+}
+
 
     header {
       display: flex;

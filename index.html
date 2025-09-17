@@ -82,40 +82,34 @@
 body {
   margin: 0;
   font-family: 'Orbitron', sans-serif;
-  height: 100vh;
-  background: #111;
-  position: relative;
-  overflow: hidden;
-  color: white;
-}
-
-body {
-  margin: 0;
-  font-family: 'Orbitron', sans-serif;
-  background: #111;   /* siyah ana zemin */
+  background: #111;   /* ana siyah arka plan */
   color: white;
   position: relative;
 }
 
 body::before {
   content: "";
-  position: fixed;   /* kaydırınca da arkada kalır */
+  position: fixed;   /* sabit arka plan */
   top: 0;
   left: 0;
-  width: 120%;
-  height: 120%;
-  background: #f1c40f;
-  clip-path: polygon(0 0, 100% 0, 70% 100%, 0% 100%);
-  animation: shapeShift 6s ease-in-out infinite alternate;
-  z-index: -1; /* içerik üstte kalsın */
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(-45deg, #111, #222, #444, #f1c40f);
+  background-size: 300% 300%;
+  animation: gradientShift 10s ease infinite;
+  z-index: -1; /* içerik üstte */
+  pointer-events: none; /* kullanıcı etkileşimini engellemesin */
 }
 
-@keyframes shapeShift {
+@keyframes gradientShift {
   0% {
-    clip-path: polygon(0 0, 100% 0, 70% 100%, 0% 100%);
+    background-position: left top;
+  }
+  50% {
+    background-position: right bottom;
   }
   100% {
-    clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
+    background-position: left top;
   }
 }
 

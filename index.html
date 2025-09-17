@@ -6,7 +6,72 @@
   <title>Omima Makina</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="icon" type="image/png" href="favicon.png">
+ .about {
+  padding: 80px 20px;
+  background: rgba(0,0,0,0.6);
+  border-radius: 12px;
+  margin: 40px auto;
+  max-width: 1100px;
+}
+.about h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  color: var(--sari);
+  margin-bottom: 40px;
+  position: relative;
+}
+.about h2::after {
+  content: "";
+  width: 80px;
+  height: 3px;
+  background: var(--sari);
+  display: block;
+  margin: 10px auto 0;
+}
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+}
+.about-text {
+  flex: 1;
+  min-width: 280px;
+  animation: slideInLeft 1s ease;
+}
+.about-text p {
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+.about-text ul {
+  margin-top: 15px;
+  padding-left: 20px;
+}
+.about-text ul li {
+  margin-bottom: 8px;
+}
+.about-image {
+  flex: 1;
+  min-width: 280px;
+  animation: slideInRight 1s ease;
+}
+.about-image img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.7);
+}
+
+/* Animasyonlar */
+@keyframes slideInLeft {
+  from { transform: translateX(-100px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+@keyframes slideInRight {
+  from { transform: translateX(100px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
   <style>
     :root {
       --sari: #f1c40f;
@@ -204,14 +269,27 @@
   </section>
 <section id="about" class="about">
   <h2>Hakkımızda</h2>
-  <p>
-    <strong>OMİMA MAKİNA</strong> olarak talaşlı imalat ve teknik hizmetler alanında faaliyet gösteriyoruz. 
-    Müşterilerimize yüksek kalite standartlarında çözümler sunuyor, sektördeki teknolojik gelişmeleri yakından takip ederek 
-    üretim süreçlerimizi sürekli geliştiriyoruz.
-  </p>
-  <p>
-  </ul>
+  <div class="about-container">
+    <div class="about-text">
+      <p>
+        <strong>OMİMA MAKİNA</strong>, talaşlı imalat ve teknik hizmetler alanında uzman kadrosuyla 
+        sektörün öncü firmalarından biridir. Yüksek kalite standartlarımız, yenilikçi üretim 
+        anlayışımız ve müşteri odaklı yaklaşımımızla hem yurt içi hem de yurt dışında tercih edilen 
+        bir marka olmayı başardık.
+      </p>
+      <p>
+        Modern üretim parkurumuzda, hassasiyet ve dayanıklılık odaklı çözümler üretiyoruz. 
+        Müşterilerimizin taleplerine uygun <span style="color:var(--sari)">özel tasarım makine ve parçalar</span> geliştiriyor, 
+        <span style="color:var(--sari)">hidrolik-pnömatik sistemler</span> kuruyor ve proje bazlı işlerde uçtan uca çözüm sunuyoruz.
+      </p>
+      </ul>
+    </div>
+    <div class="about-image">
+      <img src="about_machine.jpg" alt="Omima Makina Atölyesi">
+    </div>
+  </div>
 </section>
+
 
   <section id="services" class="services">
     <h2>Hizmetlerimiz</h2>

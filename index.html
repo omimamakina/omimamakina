@@ -14,12 +14,22 @@
       --gri: #333;
     }
 
-    body {
-      margin: 0;
-      font-family: 'Orbitron', sans-serif;
-      background: linear-gradient(135deg, #0d0d0d, #1a1a1a, #262626);
-      color: white;
-    }
+ body {
+  margin: 0;
+  font-family: 'Orbitron', sans-serif;
+  background: 
+    url('https://www.transparenttextures.com/patterns/carbon-fibre.png'), 
+    linear-gradient(-45deg, #111, #222, #444, #f1c40f);
+  background-size: auto, 400% 400%;
+  animation: gradientBG 12s ease infinite;
+  color: white;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
 
     header {
       display: flex;
@@ -192,6 +202,25 @@
     <h1>MAKİNE SEKTÖRÜNDE GÜVEN VE KALİTE</h1>
     <button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">İLETİŞİME GEÇ</button>
   </section>
+<section id="about" class="about">
+  <h2>Hakkımızda</h2>
+  <p>
+    <strong>OMİMA MAKİNA</strong> olarak talaşlı imalat ve teknik hizmetler alanında faaliyet gösteriyoruz. 
+    Müşterilerimize yüksek kalite standartlarında çözümler sunuyor, sektördeki teknolojik gelişmeleri yakından takip ederek 
+    üretim süreçlerimizi sürekli geliştiriyoruz.
+  </p>
+  <p>
+    Hizmet alanlarımız arasında şunlar bulunmaktadır:
+  </p>
+  <ul>
+    <li>Her türlü torna ve freze talaşlı imalatı</li>
+    <li>Mekanik bakım ve onarım</li>
+    <li>Hidrolik ve pnömatik sistemlerin imalatı, kurulumu ve onarımı</li>
+    <li>Özel üretim makine ve parça imalatı</li>
+    <li>Kaynaklı özel üretim çözümleri</li>
+    <li>Proje bazlı çalışmalar</li>
+  </ul>
+</section>
 
   <section id="services" class="services">
     <h2>Hizmetlerimiz</h2>

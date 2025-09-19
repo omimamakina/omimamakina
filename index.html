@@ -293,15 +293,18 @@ body::after {
   color: white;
   transform: scale(1.2);
 }
-   .contact a {
+  .contact a,
+.contact span {
   color: var(--sari) !important;
   text-decoration: none;
   font-weight: bold;
 }
 
-.contact a:hover {
+.contact a:hover,
+.contact span:hover {
   color: white !important;
   text-decoration: underline;
+  cursor: default;
 }
 
   </style>
@@ -373,19 +376,19 @@ body::after {
     </div>
   </section>
 
- <section id="contact" class="contact">
+<section id="contact" class="contact">
   <h2>İletişim</h2>
   <p style="text-align:center; margin-bottom:30px;">
-  <strong>Telefon:</strong> 
-  <a href="tel:+905356860848">0535 686 08 48</a><br>
+    <strong>Telefon:</strong> 
+    <a href="tel:+905356860848">0535 686 08 48</a><br>
 
-  <strong>E-posta:</strong> 
-  <a href="mailto:info@omima.com.tr">info@omima.com.tr</a><br>
+    <strong>E-posta:</strong> 
+    <a href="mailto:info@omima.com.tr">info@omima.com.tr</a><br>
 
-  <strong>Adres:</strong> 
-  KAYAPA 147, (530) Sk. Kapı No:3, NİLÜFER / Bursa / Türkiye
-</p>
-   
+    <strong>Adres:</strong> 
+    <span>KAYAPA 147, (530) Sk. Kapı No:3, NİLÜFER / Bursa / Türkiye</span>
+  </p>
+
   <!-- 📍 Google Maps -->
   <div style="max-width:900px; margin:20px auto;">
     <iframe 

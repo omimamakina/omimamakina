@@ -5,133 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Omima Makina</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
- <style>
-  .about {
-  padding: 80px 20px;
-  background: rgba(0,0,0,0.6);
-  border-radius: 12px;
-  margin: 40px auto;
-  max-width: 1100px;
-}
-.about h2 {
-  text-align: center;
-  font-size: 2.2rem;
-  color: var(--sari);
-  margin-bottom: 40px;
-  position: relative;
-}
-.about h2::after {
-  content: "";
-  width: 80px;
-  height: 3px;
-  background: var(--sari);
-  display: block;
-  margin: 10px auto 0;
-}
-.about-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
-  align-items: center;
-  justify-content: center;
-}
-.about-text {
-  flex: 1;
-  min-width: 280px;
-  animation: slideInLeft 1s ease;
-}
-.about-text p {
-  line-height: 1.6;
-  margin-bottom: 15px;
-}
-.about-text ul {
-  margin-top: 15px;
-  padding-left: 20px;
-}
-.about-text ul li {
-  margin-bottom: 8px;
-}
-.about-image {
-  flex: 1;
-  min-width: 280px;
-  animation: slideInRight 1s ease;
-}
-.about-image img {
-  width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.7);
-}
-
-/* Animasyonlar */
-@keyframes slideInLeft {
-  from { transform: translateX(-100px); opacity: 0; }
-  to { transform: translateX(0); opacity: 1; }
-}
-@keyframes slideInRight {
-  from { transform: translateX(100px); opacity: 0; }
-  to { transform: translateX(0); opacity: 1; }
-}
-
+  <style>
     :root {
       --sari: #f1c40f;
       --siyah: #111;
       --gri: #333;
     }
 
-body {
-  margin: 0;
-  font-family: 'Orbitron', sans-serif;
-  background: #111;   /* ana siyah arka plan */
-  color: white;
-  position: relative;
-  overflow-x: hidden;
-}
+    body {
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      background: url('https://www.transparenttextures.com/patterns/carbon-fibre.png'),
+      linear-gradient(-45deg, #111, #222, #444, #f1c40f);
+      background-size: auto, 400% 400%;
+      animation: gradientBG 12s ease infinite;
+      color: white;
+      overflow-x: hidden;
+    }
 
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(-45deg, #111, #222, #444, #f1c40f);
-  background-size: 300% 300%;
-  animation: gradientShift 12s ease infinite;
-  z-index: -2;
-  pointer-events: none;
-}
-
-/* Üçgen/Dalga Şekilli Katman */
-body::after {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 120%;
-  height: 120%;
-  background: linear-gradient(135deg, rgba(241,196,15,0.6), rgba(0,0,0,0.4));
-  clip-path: polygon(0 0, 100% 0, 80% 100%, 20% 100%);
-  animation: shapeMove 15s ease-in-out infinite alternate;
-  z-index: -1;
-  pointer-events: none;
-}
-
-/* Renk kayma animasyonu */
-@keyframes gradientShift {
-  0% { background-position: left top; }
-  50% { background-position: right bottom; }
-  100% { background-position: left top; }
-}
-
-/* Üçgen/dalga hareketi */
-@keyframes shapeMove {
-  0% { transform: translateY(-20px) rotate(0deg); }
-  50% { transform: translateY(40px) rotate(5deg); }
-  100% { transform: translateY(-20px) rotate(-5deg); }
-}
-
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
 
     header {
       display: flex;
@@ -143,15 +39,15 @@ body::after {
       top: 0;
       z-index: 1000;
     }
-   header img { height: 250px; 
-               /* daha büyük görünmesi için artırıldı */ 
-               max-height: 18vh;
-               /* ekran yüksekliğine göre orantılı */ 
-               transition: transform 0.4s ease; 
-     } 
-   header img:hover { transform: rotate(-5deg) scale(1.05);
+
+    header img {
+      height: 220px;
+      transition: transform 0.3s;
     }
-   
+    header img:hover {
+      transform: scale(1.05);
+    }
+
     nav a {
       margin: 0 15px;
       color: var(--sari);
@@ -166,111 +62,51 @@ body::after {
     .hero {
       text-align: center;
       padding: 100px 20px;
-      background: url('https://images.unsplash.com/photo-1600431521340-491056a7dc97') no-repeat center/cover;
       position: relative;
     }
-    .hero::after {
-      content: "";
-      position: absolute;
-      top:0; left:0; right:0; bottom:0;
-      background: rgba(0,0,0,0.6);
-    }
+
     .hero h1 {
       font-size: 2.5rem;
       color: var(--sari);
-      position: relative;
-      z-index: 1;
     }
+
     .hero button {
-  background: var(--sari);
-  border: none;
-  padding: 15px 30px;
-  font-size: 1rem;
-  margin-top: 20px;
-  cursor: pointer;
-  border-radius: 5px;
-  font-weight: bold;
-  position: relative;
-  z-index: 1;
-  transition: transform 0.3s, box-shadow 0.3s;
-  color: black;   /* 🔥 yazıyı siyah yap */
-}
-
-.hero button:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 15px var(--sari);
-  background: #ffd700; /* 🔥 hover için daha parlak sarı */
-  color: black; /* sabit siyah yazı */
-}
-
-
-    .services {
-      padding: 60px 20px;
-      text-align: center;
-    }
-    .services h2 {
-      font-size: 2rem;
-      margin-bottom: 40px;
-      color: var(--sari);
-    }
-    .service-cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-    .service-card {
-      background: var(--gri);
-      padding: 20px;
-      border-radius: 12px;
-      transition: transform 0.4s ease, box-shadow 0.4s ease;
-    }
-    .service-card img {
-      width: 100%;
-      border-radius: 10px;
-      margin-bottom: 15px;
-      transition: transform 0.3s ease;
-    }
-    .service-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 0 20px var(--sari);
-    }
-    .service-card:hover img {
-      transform: scale(1.1);
-    }
-
-    .contact {
-      padding: 60px 20px;
-      background: #1a1a1a;
-    }
-    .contact h2 {
-      text-align: center;
-      color: var(--sari);
-      margin-bottom: 30px;
-    }
-    form {
-      max-width: 500px;
-      margin: auto;
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
-    input, textarea {
-      padding: 12px;
-      border: none;
-      border-radius: 8px;
-      font-size: 1rem;
-    }
-    button[type="submit"] {
       background: var(--sari);
       border: none;
-      padding: 12px;
-      font-weight: bold;
+      padding: 15px 30px;
+      font-size: 1rem;
+      margin-top: 20px;
       cursor: pointer;
-      transition: background 0.3s, transform 0.3s;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: 0.3s;
     }
-    button[type="submit"]:hover {
-      background: #ffd700;
-      transform: scale(1.05);
+
+    .hero button:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 15px var(--sari);
+    }
+
+    .about {
+      padding: 60px 20px;
+      text-align: center;
+      background: rgba(0,0,0,0.7);
+      border-top: 2px solid var(--sari);
+      border-bottom: 2px solid var(--sari);
+    }
+
+    .about h2 {
+      color: var(--sari);
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .about p {
+      max-width: 900px;
+      margin: auto;
+      line-height: 1.6;
+      color: #ddd;
+      font-size: 1.1rem;
     }
 
     footer {
@@ -280,181 +116,39 @@ body::after {
       color: #aaa;
       font-size: 0.9rem;
     }
-.social-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  margin: 20px 0;
-}
 
-.social-buttons .btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  color: white;
-  font-size: 22px;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-  text-decoration: none;
-}
-
-.social-buttons .btn:hover {
-  transform: scale(1.1);
-  opacity: 0.8;
-}
-
-/* Instagram gradient */
-.social-buttons .instagram {
-  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-}
-
-/* WhatsApp green */
-.social-buttons .whatsapp {
-  background: #25D366;
-}
-
-/* Telefon ve mail için kurumsal sarı */
-.social-buttons .phone,
-.social-buttons .mail {
-  background: var(--sari);
-}
-  .contact a,
-.contact span {
-  color: var(--sari) !important;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.contact a:hover,
-.contact span:hover {
-  color: white !important;
-  text-decoration: underline;
-  cursor: default;
-}
-
+    @media (max-width: 768px) {
+      header img { height: 140px; }
+      .hero h1 { font-size: 1.8rem; }
+    }
   </style>
 </head>
 <body>
   <header>
     <img src="OMIMA_LOGO.png" alt="Omima Makina Logo">
     <nav>
-      <a href="#services">Hizmetler</a>
-      <a href="#contact">İletişim</a>
+      <a href="index.html">Ana Sayfa</a>
+      <a href="hizmetler.html">Hizmetler</a>
+      <a href="iletisim.html">İletişim</a>
     </nav>
   </header>
 
   <section class="hero">
     <h1>MAKİNE SEKTÖRÜNDE GÜVEN VE KALİTE</h1>
-    <button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">İLETİŞİME GEÇ</button>
-  </section>
-<section id="about" class="about">
-  <h2>Hakkımızda</h2>
-  <div class="about-container">
-    <div class="about-text">
-      <p>
-        <strong>OMİMA MAKİNA</strong>,olarak, talaşlı imalat ve teknik hizmetlerdeki uzmanlığımızı yenilikçi bir yaklaşımla birleştiriyoruz. 
-        Sadece parça üretmekle kalmıyor, aynı zamanda size özel, fonksiyonel ve dayanıklı çözümler tasarlıyoruz.
-        Her bir projemizde gösterdiğimiz hassasiyet, bizi sektörde güvenilir ve tercih edilen bir marka haline getirmiştir.
-
-      </p>
-      <p>
-        Modern üretim parkurumuzda, hassasiyet ve dayanıklılık odaklı çözümler üretiyoruz. 
-        Müşterilerimizin taleplerine uygun <span style="color:var(--sari)">özel tasarım makine ve parçalar</span> geliştiriyor, 
-        <span style="color:var(--sari)">hidrolik-pnömatik sistemler</span> kuruyor ve proje bazlı işlerde uçtan uca çözüm sunuyoruz.
-      </p>
-      </ul>
-    </div>
-    <div class="about-image">
-      <img src="about_machine.jpg" alt="Omima Makina Atölyesi">
-    </div>
-  </div>
-</section>
-
-
-  <section id="services" class="services">
-    <h2>Hizmetlerimiz</h2>
-    <div class="service-cards">
-      <div class="service-card">
-        <img src="TORNA_FREZE.jpg" alt="Torna ve Freze">
-        <h3>Torna ve Freze Talaşlı İmalat</h3>
-      </div>
-      <div class="service-card">
-        <img src="MEKANIK_BAKIM.jpg" alt="Mekanik Bakım">
-        <h3>Mekanik Bakım ve Onarım</h3>
-      </div>
-      <div class="service-card">
-        <img src="HIDROLIK_PNOMATIK.png" alt="Hidrolik Pnömatik">
-        <h3>Hidrolik ve Pnömatik Sistemler</h3>
-      </div>
-      <div class="service-card">
-        <img src="OZEL_URETIM.jpg" alt="Özel Üretim">
-        <h3>Özel Üretim Makine ve Parça</h3>
-      </div>
-      <div class="service-card">
-        <img src="KAYNAKLI_URETIM.jpg" alt="Kaynak">
-        <h3>Kaynaklı Özel Üretim</h3>
-      </div>
-      <div class="service-card">
-        <img src="PROJE.jpg" alt="Proje Çalışmaları">
-        <h3>Proje Bazlı Çalışmalar</h3>
-      </div>
-    </div>
+    <button onclick="window.location.href='iletisim.html'">İLETİŞİME GEÇ</button>
   </section>
 
-<section id="contact" class="contact">
-  <h2>İletişim</h2>
-  <p style="text-align:center; margin-bottom:30px;">
-    <strong>Telefon:</strong> 
-    <a href="tel:+905356860848">0535 686 08 48</a><br>
-
-    <strong>E-posta:</strong> 
-    <a href="mailto:info@omima.com.tr">info@omima.com.tr</a><br>
-
-    <strong>Adres:</strong> 
-    <span>KAYAPA 147, (530) Sk. Kapı No:3, NİLÜFER / Bursa / Türkiye</span>
-  </p>
-
-  <!-- 📍 Google Maps -->
-  <div style="max-width:900px; margin:20px auto;">
-    <iframe 
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3695.6501629311183!2d28.829072176455703!3d40.17315457042754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14ca17b715ad1c99%3A0xa20f50161f606a66!2sOmima%20Makina!5e1!3m2!1str!2str!4v1758184839354!5m2!1str!2str" 
-      width="100%" 
-      height="400" 
-      style="border:0; border-radius:12px;" 
-      allowfullscreen="" 
-      loading="lazy" 
-      referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
-  </div>
-
-  <!-- 📧 İletişim formu -->
-  <form action="https://formspree.io/f/xrbavlld" method="POST">
-    <input type="text" name="name" placeholder="Adınız" required>
-    <input type="email" name="email" placeholder="E-posta" required>
-    <textarea name="message" rows="5" placeholder="Mesajınız" required></textarea>
-    <button type="submit">Gönder</button>
-  </form>
-</section>
-
+  <section class="about">
+    <h2>Hakkımızda</h2>
+    <p>
+      Omima Makina olarak, endüstriyel makine üretimi, bakım ve özel imalat alanlarında uzun yıllara dayanan deneyimimizle hizmet veriyoruz.
+      Kaliteyi, güveni ve müşteri memnuniyetini ön planda tutan anlayışımız sayesinde, sektörün öncü firmalarından biri haline geldik.  
+      Her projede modern teknolojiyle mühendislik bilgisini birleştirerek verimli, dayanıklı ve yenilikçi çözümler üretiyoruz.
+    </p>
+  </section>
 
   <footer>
-  <div class="social-buttons">
-  <a href="https://instagram.com/omimamakina" target="_blank" class="btn instagram">
-    <i class="fab fa-instagram"></i>
-  </a>
-  <a href="https://wa.me/905356860848" target="_blank" class="btn whatsapp">
-    <i class="fab fa-whatsapp"></i>
-  </a>
-  <a href="tel:+905356860848" class="btn phone">
-    <i class="fas fa-phone"></i>
-  </a>
-  <a href="mailto:info@omima.com.tr" class="btn mail">
-    <i class="fas fa-envelope"></i>
-  </a>
-</div>
-  © 2025 Omima Makina | Tüm Hakları Saklıdır
-</footer>
+    © 2025 Omima Makina | Tüm Hakları Saklıdır
+  </footer>
 </body>
 </html>

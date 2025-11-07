@@ -1,0 +1,171 @@
+:root {
+  --sari: #f1c40f;
+}
+
+/* Arka plan */
+body {
+  margin: 0;
+  font-family: 'Orbitron', sans-serif;
+  background: linear-gradient(-45deg, #000, #111, #222, #f1c40f);
+  background-size: 400% 400%;
+  animation: gradientBG 10s infinite ease;
+  color: white;
+  overflow-x: hidden;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Üçgenler */
+.tri {
+  position: fixed;
+  width: 0; height: 0;
+  border-left: 160px solid transparent;
+  border-right: 160px solid transparent;
+  border-bottom: 240px solid rgba(241,196,15,0.06);
+  animation: triFloat 7s infinite ease-in-out;
+  z-index: -1;
+}
+
+.t1 { top: 10%; left: 5%; animation-delay: 0s; }
+.t2 { top: 40%; left: 70%; animation-delay: 2s; }
+.t3 { top: 70%; left: 20%; animation-delay: 4s; }
+
+@keyframes triFloat {
+  0% { transform: translateY(0); opacity: 0.3; }
+  50% { transform: translateY(-40px); opacity: 0.7; }
+  100% { transform: translateY(0); opacity: 0.3; }
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 40px;
+}
+
+.logo {
+  width: 200px;
+  filter: drop-shadow(0 0 10px var(--sari));
+  transition: .3s;
+}
+
+.logo:hover {
+  transform: scale(1.07);
+  filter: drop-shadow(0 0 18px var(--sari));
+}
+
+/* Menü */
+nav a {
+  margin-left: 25px;
+  text-decoration: none;
+  color: white;
+  font-size: 1.1rem;
+  position: relative;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px; left: 0;
+  width: 0%; height: 2px;
+  background: var(--sari);
+  transition: .3s;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+nav a:hover {
+  color: var(--sari);
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 140px 20px;
+}
+
+.hero h1 {
+  font-size: 3.2rem;
+  color: var(--sari);
+  text-shadow: 0 0 15px #000;
+}
+
+.hero p {
+  font-size: 1.1rem;
+}
+
+/* Sosyal ikonlar */
+.social-bar a {
+  margin: 12px;
+  font-size: 2.5rem;
+}
+
+.insta { color: #E1306C; }
+.wp { color: #25D366; }
+.phone { color: #1E90FF; }
+.mail { color: #FFD700; }
+
+/* SAYFA BAŞLIKLARI */
+.page-title {
+  text-align: center;
+  color: var(--sari);
+  font-size: 2rem;
+  margin-top: 30px;
+  text-shadow: 0 0 12px black;
+}
+
+/* HİZMET CARDS */
+.service-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+  gap: 25px;
+  padding: 30px;
+}
+
+.service-card {
+  background: rgba(0,0,0,0.7);
+  padding: 18px;
+  border-radius: 14px;
+  transition: .3s;
+}
+
+.service-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 18px var(--sari);
+}
+
+/* İLETİŞİM */
+.contact-box {
+  max-width: 500px;
+  margin: auto;
+  padding: 20px;
+  background: rgba(0,0,0,0.6);
+  border-radius: 12px;
+  color: white;
+}
+
+.yellow {
+  color: var(--sari);
+}
+
+.contact-icons {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.contact-icons a {
+  margin: 15px;
+  font-size: 2.4rem;
+}

@@ -1,151 +1,91 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Omima Makina</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omima Makina</title>
 
-  <!-- FONT -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Google Font: Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-  <style>
-    :root {
-      --sari: #f1c40f;
-    }
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: #f5f5f5;
+        }
 
-    body {
-      font-family: 'Poppins', sans-serif;
-      margin: 0;
-      color: #eee;
-      background: 
-        url('https://www.transparenttextures.com/patterns/carbon-fibre.png'),
-        linear-gradient(-45deg, #111, #1a1a1a, #333, #f1c40f);
-      background-size: auto, 400% 400%;
-      animation: gradientBG 12s ease infinite;
-    }
+        /* HEADER */
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 40px;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            z-index: 10;
+            background: transparent;
+        }
 
-    @keyframes gradientBG {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
+        header img {
+            height: 60px;
+        }
 
-    header {
-      text-align: center;
-      padding: 40px 10px;
-      background: rgba(0, 0, 0, 0.75);
-      box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
-    }
+        nav a {
+            margin-left: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            color: #111 !important; /* Menü yazılarını siyah yapar */
+            transition: 0.2s;
+        }
 
-    header h1 {
-      color: var(--sari);
-      font-size: 2.8rem;
-      margin: 0;
-      letter-spacing: 2px;
-      font-weight: 700;
-    }
+        nav a:hover {
+            color: white !important;
+            text-shadow: 0 0 10px #f1c40f;
+        }
 
-    header p {
-      color: #ddd;
-      font-size: 1.2rem;
-      margin-top: 10px;
-    }
+        /* HERO BÖLÜMÜ */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(135deg, #e1b000, #d89e00);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
 
-    nav {
-      margin-top: 25px;
-    }
+        .hero h1 {
+            font-size: 48px;
+            font-weight: 700;
+            margin: 0;
+        }
 
-    nav a {
-      color: var(--sari);
-      text-decoration: none;
-      margin: 0 15px;
-      font-size: 1.1rem;
-      font-weight: 500;
-      transition: 0.3s ease;
-    }
-
-    nav a:hover {
-      color: white;
-      text-shadow: 0 0 10px var(--sari);
-    }
-
-    /* Ana içerik */
-    .hero {
-      text-align: center;
-      padding: 80px 20px;
-    }
-
-    .hero h2 {
-      color: var(--sari);
-      font-size: 2.4rem;
-      margin-bottom: 20px;
-      font-weight: 600;
-    }
-
-    .hero p {
-      max-width: 700px;
-      margin: auto;
-      color: #ddd;
-      font-size: 1.15rem;
-      line-height: 1.8;
-    }
-
-    .cta-btn {
-      display: inline-block;
-      margin-top: 35px;
-      padding: 14px 34px;
-      background: var(--sari);
-      color: #111;
-      border-radius: 10px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: 0.3s ease;
-      font-size: 1.1rem;
-    }
-
-    .cta-btn:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 20px var(--sari);
-    }
-
-    footer {
-      margin-top: 60px;
-      text-align: center;
-      padding: 20px;
-      background: rgba(0, 0, 0, 0.85);
-      color: #ccc;
-      font-size: 0.95rem;
-    }
-  </style>
+        .hero p {
+            font-size: 20px;
+            margin-top: 15px;
+        }
+    </style>
 </head>
-
 <body>
 
-<header>
-  <h1>OMIMA MAKİNA</h1>
-  <p>Profesyonel imalat, bakım ve özel makina çözümleri</p>
+    <!-- HEADER -->
+    <header>
+        <img src="LOGO.png" alt="Omima Makina Logo"> <!-- LOGO DOSYA ADINI DÜZELT -->
+        <nav>
+            <a href="index.html">Ana Sayfa</a>
+            <a href="hizmetler.html">Hizmetler</a>
+            <a href="iletisim.html">İletişim</a>
+        </nav>
+    </header>
 
-  <nav>
-    <a href="index.html">Ana Sayfa</a>
-    <a href="hizmetler.html">Hizmetler</a>
-    <a href="iletisim.html">İletişim</a>
-  </nav>
-</header>
-
-<section class="hero">
-  <h2>Endüstriyel Üretimde Güvenilir Çözüm Ortağınız</h2>
-  <p>
-    Torna – freze talaşlı imalat, mekanik bakım, hidrolik & pnömatik sistemler,
-    kaynaklı üretim, özel makina imalatı ve proje destek hizmetleri ile
-    işletmenize yüksek kalite standartlarında çözümler sunuyoruz.
-  </p>
-
-  <a href="hizmetler.html" class="cta-btn">Hizmetlerimizi İncele</a>
-</section>
-
-<footer>
-  © 2025 Omima Makina | Tüm Hakları Saklıdır
-</footer>
+    <!-- ANA BÖLÜM -->
+    <div class="hero">
+        <h1>Omima Makina</h1>
+        <p>Profesyonel mühendislik ve üretim çözümleri</p>
+    </div>
 
 </body>
 </html>

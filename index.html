@@ -1,128 +1,151 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Omima Makina</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Omima Makina</title>
 
-    <!-- ✅ Poppins Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <!-- FONT -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <style>
+    :root {
+      --sari: #f1c40f;
+    }
 
-        body {
-            font-family: "Poppins", sans-serif !important;
-            background: linear-gradient(120deg, #111, #f1c40f);
-            background-size: 300% 300%;
-            animation: bgMove 8s ease infinite;
-            color: white;
-            overflow-x: hidden;
-        }
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      color: #eee;
+      background: 
+        url('https://www.transparenttextures.com/patterns/carbon-fibre.png'),
+        linear-gradient(-45deg, #111, #1a1a1a, #333, #f1c40f);
+      background-size: auto, 400% 400%;
+      animation: gradientBG 12s ease infinite;
+    }
 
-        @keyframes bgMove {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
 
-        /* ✅ Üçgen şekiller */
-        .triangles {
-            position: fixed;
-            inset: 0;
-            z-index: -1;
-            overflow: hidden;
-        }
+    header {
+      text-align: center;
+      padding: 40px 10px;
+      background: rgba(0, 0, 0, 0.75);
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
+    }
 
-        .triangles div {
-            position: absolute;
-            width: 0;
-            height: 0;
-            border-left: 140px solid transparent;
-            border-right: 140px solid transparent;
-            opacity: 0.25;
-            animation: float 12s infinite ease-in-out;
-        }
+    header h1 {
+      color: var(--sari);
+      font-size: 2.8rem;
+      margin: 0;
+      letter-spacing: 2px;
+      font-weight: 700;
+    }
 
-        .t1 { border-bottom: 200px solid #f1c40f; top: 10%; left: 10%; animation-delay: 0s; }
-        .t2 { border-bottom: 200px solid #111; top: 60%; left: 30%; animation-delay: 3s; }
-        .t3 { border-bottom: 200px solid #f1c40f; top: 30%; left: 70%; animation-delay: 6s; }
+    header p {
+      color: #ddd;
+      font-size: 1.2rem;
+      margin-top: 10px;
+    }
 
-        @keyframes float {
-            0% { transform: translateY(0) rotate(0deg); }
-            50% { transform: translateY(-40px) rotate(20deg); }
-            100% { transform: translateY(0) rotate(0deg); }
-        }
+    nav {
+      margin-top: 25px;
+    }
 
-        /* ✅ Header */
-        header {
-            width: 100%;
-            padding: 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+    nav a {
+      color: var(--sari);
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 1.1rem;
+      font-weight: 500;
+      transition: 0.3s ease;
+    }
 
-        header img {
-            height: 70px; 
-        }
+    nav a:hover {
+      color: white;
+      text-shadow: 0 0 10px var(--sari);
+    }
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin-left: 20px;
-            font-weight: 500;
-        }
+    /* Ana içerik */
+    .hero {
+      text-align: center;
+      padding: 80px 20px;
+    }
 
-        /* ✅ Hero */
-        .hero {
-            text-align: center;
-            margin-top: 120px;
-            padding: 20px;
-        }
+    .hero h2 {
+      color: var(--sari);
+      font-size: 2.4rem;
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
 
-        .hero h1 {
-            font-size: 48px;
-            font-weight: 700;
-        }
+    .hero p {
+      max-width: 700px;
+      margin: auto;
+      color: #ddd;
+      font-size: 1.15rem;
+      line-height: 1.8;
+    }
 
-        .hero p {
-            font-size: 20px;
-            margin-top: 10px;
-        }
+    .cta-btn {
+      display: inline-block;
+      margin-top: 35px;
+      padding: 14px 34px;
+      background: var(--sari);
+      color: #111;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s ease;
+      font-size: 1.1rem;
+    }
 
-    </style>
+    .cta-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px var(--sari);
+    }
+
+    footer {
+      margin-top: 60px;
+      text-align: center;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.85);
+      color: #ccc;
+      font-size: 0.95rem;
+    }
+  </style>
 </head>
 
 <body>
 
-    <!-- ✅ Arka plan üçgenleri -->
-    <div class="triangles">
-        <div class="t1"></div>
-        <div class="t2"></div>
-        <div class="t3"></div>
-    </div>
+<header>
+  <h1>OMIMA MAKİNA</h1>
+  <p>Profesyonel imalat, bakım ve özel makina çözümleri</p>
 
-    <!-- ✅ Header -->
-    <header>
-        <img src="LOGO.png" alt="Omima Makina Logo">
+  <nav>
+    <a href="index.html">Ana Sayfa</a>
+    <a href="hizmetler.html">Hizmetler</a>
+    <a href="iletisim.html">İletişim</a>
+  </nav>
+</header>
 
-        <nav>
-            <a href="index.html">Ana Sayfa</a>
-            <a href="hizmetler.html">Hizmetler</a>
-            <a href="iletisim.html">İletişim</a>
-        </nav>
-    </header>
+<section class="hero">
+  <h2>Endüstriyel Üretimde Güvenilir Çözüm Ortağınız</h2>
+  <p>
+    Torna – freze talaşlı imalat, mekanik bakım, hidrolik & pnömatik sistemler,
+    kaynaklı üretim, özel makina imalatı ve proje destek hizmetleri ile
+    işletmenize yüksek kalite standartlarında çözümler sunuyoruz.
+  </p>
 
-    <!-- ✅ Hero -->
-    <section class="hero">
-        <h1>Omima Makina</h1>
-        <p>Profesyonel mühendislik ve üretim çözümleri</p>
-    </section>
+  <a href="hizmetler.html" class="cta-btn">Hizmetlerimizi İncele</a>
+</section>
+
+<footer>
+  © 2025 Omima Makina | Tüm Hakları Saklıdır
+</footer>
 
 </body>
 </html>

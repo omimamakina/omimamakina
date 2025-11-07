@@ -3,152 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Omima Makina</title>
+  <title>Omima Makina | Ana Sayfa</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --sari: #f1c40f;
-      --siyah: #111;
-      --gri: #333;
-    }
-
-    body {
-      margin: 0;
-      font-family: 'Orbitron', sans-serif;
-      background: url('https://www.transparenttextures.com/patterns/carbon-fibre.png'),
-      linear-gradient(-45deg, #111, #222, #444, #f1c40f);
-      background-size: auto, 400% 400%;
-      animation: gradientBG 12s ease infinite;
-      color: white;
-      overflow-x: hidden;
-    }
-
-    @keyframes gradientBG {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 30px;
-      background: rgba(0,0,0,0.8);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    header img {
-      height: 220px;
-      transition: transform 0.3s;
-    }
-    header img:hover {
-      transform: scale(1.05);
-    }
-
-    nav a {
-      margin: 0 15px;
-      color: var(--sari);
-      text-decoration: none;
-      font-weight: bold;
-      transition: color 0.3s;
-    }
-    nav a:hover {
-      color: white;
-    }
-
-    .hero {
-      text-align: center;
-      padding: 100px 20px;
-      position: relative;
-    }
-
-    .hero h1 {
-      font-size: 2.5rem;
-      color: var(--sari);
-    }
-
-    .hero button {
-      background: var(--sari);
-      border: none;
-      padding: 15px 30px;
-      font-size: 1rem;
-      margin-top: 20px;
-      cursor: pointer;
-      border-radius: 5px;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-
-    .hero button:hover {
-      transform: scale(1.1);
-      box-shadow: 0 0 15px var(--sari);
-    }
-
-    .about {
-      padding: 60px 20px;
-      text-align: center;
-      background: rgba(0,0,0,0.7);
-      border-top: 2px solid var(--sari);
-      border-bottom: 2px solid var(--sari);
-    }
-
-    .about h2 {
-      color: var(--sari);
-      font-size: 2rem;
-      margin-bottom: 20px;
-    }
-
-    .about p {
-      max-width: 900px;
-      margin: auto;
-      line-height: 1.6;
-      color: #ddd;
-      font-size: 1.1rem;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: var(--siyah);
-      color: #aaa;
-      font-size: 0.9rem;
-    }
-
-    @media (max-width: 768px) {
-      header img { height: 140px; }
-      .hero h1 { font-size: 1.8rem; }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/a2e860f6e2.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-  <header>
-    <img src="OMIMA_LOGO.png" alt="Omima Makina Logo">
-    <nav>
-      <a href="index.html">Ana Sayfa</a>
-      <a href="hizmetler.html">Hizmetler</a>
-      <a href="iletisim.html">İletişim</a>
-    </nav>
-  </header>
 
-  <section class="hero">
-    <h1>MAKİNE SEKTÖRÜNDE GÜVEN VE KALİTE</h1>
-    <button onclick="window.location.href='iletisim.html'">İLETİŞİME GEÇ</button>
-  </section>
+<!-- Arka plan üçgenleri -->
+<div class="tri t1"></div>
+<div class="tri t2"></div>
+<div class="tri t3"></div>
 
-  <section class="about">
-    <h2>Hakkımızda</h2>
-    <p>
-      Omima Makina olarak, endüstriyel makine üretimi, bakım ve özel imalat alanlarında uzun yıllara dayanan deneyimimizle hizmet veriyoruz.
-      Kaliteyi, güveni ve müşteri memnuniyetini ön planda tutan anlayışımız sayesinde, sektörün öncü firmalarından biri haline geldik.  
-      Her projede modern teknolojiyle mühendislik bilgisini birleştirerek verimli, dayanıklı ve yenilikçi çözümler üretiyoruz.
-    </p>
-  </section>
+<header class="header">
+  <img src="logo.png" class="logo">
+  <nav class="nav">
+    <a href="index.html">Ana Sayfa</a>
+    <a href="hizmetler.html">Hizmetler</a>
+    <a href="iletisim.html">İletişim</a>
+  </nav>
+</header>
 
-  <footer>
-    © 2025 Omima Makina | Tüm Hakları Saklıdır
-  </footer>
+<section class="hero">
+  <h1>OMIMA MAKINA</h1>
+  <p>Endüstriyel Makine Üretimi • Mekanik Bakım • Özel Proje Çözümleri</p>
+
+  <div class="social-bar">
+    <a href="https://instagram.com/omimamakina" class="insta"><i class="fa-brands fa-instagram"></i></a>
+    <a href="https://wa.me/905356860848" class="wp"><i class="fa-brands fa-whatsapp"></i></a>
+    <a href="tel:05356860848" class="phone"><i class="fa-solid fa-phone"></i></a>
+    <a href="mailto:info@omima.com.tr" class="mail"><i class="fa-solid fa-envelope"></i></a>
+  </div>
+</section>
+
 </body>
 </html>

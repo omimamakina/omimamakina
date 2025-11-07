@@ -5,133 +5,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>İletişim | Omima Makina</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Orbitron', sans-serif;
-      background: url('https://www.transparenttextures.com/patterns/carbon-fibre.png'),
-      linear-gradient(-45deg, #111, #222, #444, #f1c40f);
-      background-size: auto, 400% 400%;
-      animation: gradientBG 12s ease infinite;
-      color: white;
-      overflow-x: hidden;
-    }
-
-    @keyframes gradientBG {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 30px;
-      background: rgba(0,0,0,0.8);
-    }
-
-    header img {
-      height: 200px;
-    }
-
-    nav a {
-      margin: 0 15px;
-      color: #f1c40f;
-      text-decoration: none;
-      font-weight: bold;
-      transition: color 0.3s;
-    }
-
-    nav a:hover {
-      color: white;
-    }
-
-    .contact {
-      padding: 60px 20px;
-      text-align: center;
-      max-width: 600px;
-      margin: auto;
-    }
-
-    .contact h1 {
-      color: #f1c40f;
-      margin-bottom: 30px;
-    }
-
-    .contact-info p {
-      font-size: 1.1rem;
-      margin: 10px 0;
-    }
-
-    .contact-info a {
-      color: #f1c40f;
-      text-decoration: none;
-    }
-
-    .icons {
-      margin-top: 30px;
-    }
-
-    .icons a {
-      margin: 0 10px;
-      font-size: 1.8rem;
-      text-decoration: none;
-    }
-
-    .fa-instagram { color: #E1306C; }
-    .fa-whatsapp { color: #25D366; }
-    .fa-envelope { color: #FFD700; }
-    .fa-phone { color: #FFD700; }
-
-    iframe {
-      border: 0;
-      width: 100%;
-      height: 400px;
-      border-radius: 12px;
-      margin-top: 40px;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #111;
-      color: #aaa;
-      margin-top: 40px;
-    }
-  </style>
-  <script src="https://kit.fontawesome.com/a2e0e6b4ed.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/a2e860f6e2.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-  <header>
-    <img src="OMIMA_LOGO.png" alt="Omima Makina Logo">
-    <nav>
-      <a href="index.html">Ana Sayfa</a>
-      <a href="hizmetler.html">Hizmetler</a>
-      <a href="iletisim.html">İletişim</a>
-    </nav>
-  </header>
 
-  <section class="contact">
-    <h1>İletişim</h1>
-    <div class="contact-info">
-      <p><strong>Telefon:</strong> <a href="tel:+905356860848">0535 686 08 48</a></p>
-      <p><strong>E-posta:</strong> <a href="mailto:info@omima.com.tr">info@omima.com.tr</a></p>
-      <p><strong>Adres:</strong> KAYAPA 147, (530) Sk. Kapı No:3, NİLÜFER / Bursa / Türkiye</p>
-    </div>
+<div class="tri t1"></div>
+<div class="tri t2"></div>
+<div class="tri t3"></div>
 
-    <div class="icons">
-      <a href="https://www.instagram.com/omimamakina" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="https://wa.me/905356860848" target="_blank"><i class="fab fa-whatsapp"></i></a>
-      <a href="mailto:info@omima.com.tr"><i class="fas fa-envelope"></i></a>
-      <a href="tel:+905356860848"><i class="fas fa-phone"></i></a>
-    </div>
+<header class="header">
+  <img src="logo.png" class="logo">
+  <nav class="nav">
+    <a href="index.html">Ana Sayfa</a>
+    <a href="hizmetler.html">Hizmetler</a>
+    <a href="iletisim.html">İletişim</a>
+  </nav>
+</header>
 
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3695.6501629311183!2d28.829072176455703!3d40.17315457042754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14ca17b715ad1c99%3A0xa20f50161f606a66!2sOmima%20Makina!5e1!3m2!1str!2str!4v1758184839354!5m2!1str!2str" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-  </section>
+<h2 class="page-title">İLETİŞİM</h2>
 
-  <footer>
-    © 2025 Omima Makina | Tüm Hakları Saklıdır
-  </footer>
+<div class="contact-box">
+  <p><strong>Adres:</strong> Kayapa OSB, Bursa</p>
+  <p><strong>Telefon:</strong> <a href="tel:05356860848" class="yellow">0535 686 0848</a></p>
+  <p><strong>E-Mail:</strong> <a href="mailto:info@omima.com.tr" class="yellow">info@omima.com.tr</a></p>
+</div>
+
+<div class="contact-icons">
+  <a href="https://instagram.com/omimamakina" class="insta"><i class="fa-brands fa-instagram"></i></a>
+  <a href="https://wa.me/905356860848" class="wp"><i class="fa-brands fa-whatsapp"></i></a>
+  <a href="tel:05356860848" class="phone"><i class="fa-solid fa-phone"></i></a>
+  <a href="mailto:info@omima.com.tr" class="mail"><i class="fa-solid fa-envelope"></i></a>
+</div>
+
 </body>
 </html>

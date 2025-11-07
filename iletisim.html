@@ -1,43 +1,178 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>İletişim | Omima Makina</title>
+
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <script src="https://kit.fontawesome.com/a2e860f6e2.js" crossorigin="anonymous"></script>
+
+  <style>
+    :root {
+      --sari: #f1c40f;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Orbitron", sans-serif;
+      background: linear-gradient(-45deg, #111, #222, #444, #f1c40f);
+      background-size: 400% 400%;
+      animation: gradientBG 10s ease infinite;
+      color: white;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    header {
+      text-align: center;
+      padding: 30px;
+      background: rgba(0, 0, 0, 0.85);
+    }
+
+    header h1 {
+      color: var(--sari);
+      font-size: 2.4rem;
+      margin: 0;
+    }
+
+    .contact-box {
+      max-width: 650px;
+      margin: 40px auto;
+      padding: 25px;
+      background: rgba(0, 0, 0, 0.55);
+      border-radius: 14px;
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
+      text-align: center;
+    }
+
+    .contact-box h2 {
+      color: var(--sari);
+      font-size: 1.8rem;
+      margin-bottom: 25px;
+    }
+
+    .info-item {
+      font-size: 1.1rem;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .info-item span {
+      color: var(--sari);
+    }
+
+    /* ---- SOSYAL ICONLAR ---- */
+    .socials {
+      margin-top: 25px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .socials a {
+      font-size: 2.3rem;
+      text-decoration: none;
+      transition: transform 0.3s ease;
+    }
+
+    .socials a:hover {
+      transform: scale(1.2);
+    }
+
+    /* Instagram (renkli) */
+    .ig {
+      background: linear-gradient(45deg, #feda75, #d62976, #962fbf, #4f5bd5);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    /* WhatsApp */
+    .wa {
+      color: #25d366;
+    }
+
+    /* Telefon */
+    .phone {
+      color: #3498db;
+    }
+
+    /* Mail */
+    .mail {
+      color: #e74c3c;
+    }
+
+    .back-btn {
+      display: block;
+      width: fit-content;
+      margin: 35px auto 0;
+      padding: 12px 30px;
+      background: var(--sari);
+      color: #111;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+
+    .back-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 18px var(--sari);
+    }
+
+    footer {
+      margin-top: 40px;
+      text-align: center;
+      padding: 15px;
+      background: rgba(0,0,0,0.85);
+      color: #ccc;
+      font-size: 0.9rem;
+    }
+  </style>
+
+  <!-- ICONLAR -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
 
-<div class="tri t1"></div>
-<div class="tri t2"></div>
-<div class="tri t3"></div>
+  <header>
+    <h1>İletişim</h1>
+  </header>
 
-<header class="header">
-  <img src="logo.png" class="logo">
-  <nav class="nav">
-    <a href="index.html">Ana Sayfa</a>
-    <a href="hizmetler.html">Hizmetler</a>
-    <a href="iletisim.html">İletişim</a>
-  </nav>
-</header>
+  <div class="contact-box">
+    <h2>Bizimle İletişime Geçin</h2>
 
-<h2 class="page-title">İLETİŞİM</h2>
+    <div class="info-item"><i class="fa fa-map-marker-alt"></i> <span>Barakfakih OSB – Bursa</span></div>
 
-<div class="contact-box">
-  <p><strong>Adres:</strong> Kayapa OSB, Bursa</p>
-  <p><strong>Telefon:</strong> <a href="tel:05356860848" class="yellow">0535 686 0848</a></p>
-  <p><strong>E-Mail:</strong> <a href="mailto:info@omima.com.tr" class="yellow">info@omima.com.tr</a></p>
-</div>
+    <div class="info-item phone">
+      <i class="fa fa-phone"></i>
+      <span>+90 555 555 55 55</span>
+    </div>
 
-<div class="contact-icons">
-  <a href="https://instagram.com/omimamakina" class="insta"><i class="fa-brands fa-instagram"></i></a>
-  <a href="https://wa.me/905356860848" class="wp"><i class="fa-brands fa-whatsapp"></i></a>
-  <a href="tel:05356860848" class="phone"><i class="fa-solid fa-phone"></i></a>
-  <a href="mailto:info@omima.com.tr" class="mail"><i class="fa-solid fa-envelope"></i></a>
-</div>
+    <div class="info-item mail">
+      <i class="fa fa-envelope"></i>
+      <span>info@omimamakina.com</span>
+    </div>
+
+    <div class="socials">
+      <a href="https://instagram.com" target="_blank" class="ig"><i class="fab fa-instagram"></i></a>
+      <a href="https://wa.me/905555555555" target="_blank" class="wa"><i class="fab fa-whatsapp"></i></a>
+      <a href="tel:+905555555555" class="phone"><i class="fa fa-phone"></i></a>
+      <a href="mailto:info@omimamakina.com" class="mail"><i class="fa fa-envelope"></i></a>
+    </div>
+
+  </div>
+
+  <a href="index.html" class="back-btn">⬅ Ana Sayfa</a>
+
+  <footer>© 2025 Omima Makina | Tüm Hakları Saklıdır</footer>
 
 </body>
 </html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <!-- Charset & Viewport -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Title & Description (SEO) -->
+  <title>İletişim | Bursa Hidrolik Makina İmalatı</title>
+  <meta name="description" content="Bursa hidrolik makina imalatı ve fason parça üretimi için bizimle iletişime geçin. Projeye özel çözümler.">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://www.siteadi.com/iletisim.html">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/custom.css">
+
+  <!-- Schema: ContactPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "İletişim",
+    "url": "https://www.siteadi.com/iletisim.html",
+    "about": {
+      "@type": "LocalBusiness",
+      "name": "Firma Adı",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Bursa",
+        "addressCountry": "TR"
+      }
+    }
+  }
+  </script>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="/">FİRMA LOGO</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="/">Ana Sayfa</a></li>
+          <li class="nav-item"><a class="nav-link" href="hakkimizda.html">Hakkımızda</a></li>
+          <li class="nav-item"><a class="nav-link" href="hizmetler.html">Hizmetler</a></li>
+          <li class="nav-item"><a class="nav-link" href="referanslar.html">Referanslar</a></li>
+          <li class="nav-item"><a class="nav-link active btn btn-outline-dark ms-lg-3" href="iletisim.html">İletişim</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- MAIN -->
+<main class="mt-5 pt-5">
+
+  <!-- PAGE TITLE -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <h1 class="fw-bold">İletişim</h1>
+      <p class="lead">
+        Hidrolik makina imalatı ve fason parça üretimi talepleriniz için bizimle iletişime geçin.
+      </p>
+    </div>
+  </section>
+
+  <!-- CONTENT -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row g-5">
+
+        <!-- İLETİŞİM BİLGİLERİ -->
+        <div class="col-lg-5">
+          <h2 class="h4 mb-3">İletişim Bilgileri</h2>
+          <p>
+            Bursa merkezli üretim tesisimiz ile projeye özel makina ve fason üretim çözümleri sunuyoruz.
+          </p>
+
+          <ul class="list-unstyled">
+            <li class="mb-2"><strong>Adres:</strong> Bursa / Türkiye</li>
+            <li class="mb-2"><strong>Telefon:</strong> <a href="tel:+905XXXXXXXXX">+90 5XX XXX XX XX</a></li>
+            <li class="mb-2"><strong>E-posta:</strong> <a href="mailto:info@siteadi.com">info@siteadi.com</a></li>
+          </ul>
+
+          <p class="small text-muted">
+            Çalışma Saatleri: Hafta içi 08:00 – 18:00
+          </p>
+        </div>
+
+        <!-- FORM -->
+        <div class="col-lg-7">
+          <h2 class="h4 mb-3">Teklif & Proje Talebi</h2>
+
+          <form action="form-gonder.php" method="post">
+
+            <!-- Honeypot (Botlar düşsün diye) -->
+            <div style="display:none;">
+              <input type="text" name="company_website">
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Ad Soyad</label>
+              <input type="text" name="name" class="form-control" required>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Firma Adı</label>
+              <input type="text" name="company" class="form-control">
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Telefon</label>
+              <input type="tel" name="phone" class="form-control" required>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">E-posta</label>
+              <input type="email" name="email" class="form-control">
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Talep / Proje Detayı</label>
+              <textarea name="message" rows="5" class="form-control" required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-dark">
+              Gönder
+            </button>
+
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="bg-dark text-white py-4">
+  <div class="container text-center">
+    <p class="mb-1">© 2026 Firma Adı</p>
+    <p class="small mb-0">Bursa hidrolik makina imalatı ve fason üretim firması</p>
+  </div>
+</footer>
+
+<!-- JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+<script src="assets/js/main.js" defer></script>
+
+</body>
+</html>

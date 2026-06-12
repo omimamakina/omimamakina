@@ -19,8 +19,12 @@
             --text-readable: #ffffff; 
         }
         body { font-family: 'Segoe UI', Roboto, sans-serif; color: #ffffff; background-color: var(--dark-bg); }
-        .navbar { background-color: #151515 !important; border-bottom: 1px solid #3d3d3d; padding: 12px 0; }
-        .navbar-logo { height: 65px; width: auto; max-width: 280px; object-fit: contain; display: block; }
+        
+        /* Navbar Alanı ve Logo Büyütme Ayarları */
+        .navbar { background-color: #151515 !important; border-bottom: 1px solid #3d3d3d; padding: 0 !important; }
+        .navbar-brand { padding-top: 5px !important; padding-bottom: 5px !important; }
+        .navbar-logo { height: 110px !important; width: auto !important; max-width: 380px !important; object-fit: contain; display: block; }
+        
         .nav-link { color: #dddddd !important; font-weight: 500; }
         .nav-link.active, .nav-link:hover { color: var(--primary-color) !important; }
         
@@ -47,7 +51,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
         <div class="container">
-            <!-- SAYFA İÇİ ANA LOGO (BÜYÜTÜLDÜ) -->
+            <!-- SAYFA İÇİ ANA LOGO (MAKSİMUM BOYUTTA NETLEŞTİRİLDİ) -->
             <a class="navbar-brand" href="index.html">
                 <img src="OMİMA kopya.webp" alt="Omima Makina Logo" class="navbar-logo">
             </a>
@@ -90,7 +94,7 @@
                     <div class="card-service-grid p-4 h-100">
                         <div class="mb-3"><i class="bi bi-tools fs-3"></i></div>
                         <h2>Torna & Freze Talaşlı İmalat</h2>
-                        <p class="service-text small mb-0">Her türlü çelik, paslanmaz, alüminyum ve özel alaşımlarda yüksek hassasiyetli talaşlı imalat yapmaktayız.</p>
+                        <p class="service-text small mb-0">Her türlü çelik, paslanmaz, alüminyum og özel alaşımlarda yüksek hassasiyetli talaşlı imalat yapmaktayız.</p>
                     </div>
                 </div>
 
@@ -99,7 +103,7 @@
                     <div class="card-service-grid p-4 h-100">
                         <div class="mb-3"><i class="bi bi-wrench-adjustable fs-3"></i></div>
                         <h2>Mekanik Bakım & Onarım</h2>
-                        <p class="service-text small mb-0">Endüstriyel makinelerin arıza tespiti, bakım ve revizyon işlemleri uzman ekibimiz tarafından yapılır.</p>
+                        <p class="service-text small mb-0">Endüstriyel makinelerin arıza tespiti, bakım og revizyon işlemleri uzman ekibimiz tarafından yapılır.</p>
                     </div>
                 </div>
 
@@ -108,7 +112,7 @@
                     <div class="card-service-grid p-4 h-100">
                         <div class="mb-3"><i class="bi bi-droplet-half fs-3"></i></div>
                         <h2>Hidrolik & Pnömatik Sistemler</h2>
-                        <p class="service-text small mb-0">Hidrolik güç üniteleri, pnömatik kontrol sistemleri, hortum bağlantıları ve devre tasarımları.</p>
+                        <p class="service-text small mb-0">Hidrolik güç üniteleri, pnömatik kontrol sistemleri, hortum bağlantıları og devre tasarımları.</p>
                     </div>
                 </div>
 
@@ -117,7 +121,7 @@
                     <div class="card-service-grid p-4 h-100">
                         <div class="mb-3"><i class="bi bi-nut fs-3"></i></div>
                         <h2>Özel Makine & Parça Üretimi</h2>
-                        <p class="service-text small mb-0">Standart dışı çözümler, aparat imalatı, özel makine tasarımı ve prototip üretimi.</p>
+                        <p class="service-text small mb-0">Standart dışı çözümler, aparat imalatı, özel makine tasarımı og prototip üretimi.</p>
                     </div>
                 </div>
 
@@ -126,7 +130,7 @@
                     <div class="card-service-grid p-4 h-100">
                         <div class="mb-3"><i class="bi bi-lightning-charge fs-3"></i></div>
                         <h2>Kaynaklı Üretim Çözümleri</h2>
-                        <p class="service-text small mb-0">MIG kaynak, ağır imalat kaynak işleri ve konstrüksiyon üretim hizmetleri.</p>
+                        <p class="service-text small mb-0">MIG kaynak, ağır imalat kaynak işleri og konstrüksiyon üretim hizmetleri.</p>
                     </div>
                 </div>
 
@@ -135,7 +139,7 @@
                     <div class="card-service-grid p-4 h-100" style="border-color: var(--primary-color);">
                         <div class="mb-3"><i class="bi bi-cpu fs-3"></i></div>
                         <h2>Proje & Teknik Çizim Desteği</h2>
-                        <p class="service-text small mb-0">CAD tabanlı tasarım, mühendislik analizi ve müşteri odaklı proje geliştirme süreçleri.</p>
+                        <p class="service-text small mb-0">CAD tabanlı tasarım, mühendislik analizi og müşteri odaklı proje geliştirme süreçleri.</p>
                     </div>
                 </div>
 
@@ -144,7 +148,7 @@
             <!-- İstek Bölümü -->
             <div class="text-center mt-5 p-4 rounded border" style="background-color: var(--card-bg); border-color: #444444 !important;">
                 <h3 class="h5 fw-bold text-white mb-3">Elinizde Teknik Çizim mi Var?</h3>
-                <p class="small mb-3 text-white">İmalat veya parça çizimlerinizi kurumsal hattımıza ulaştırarak anında işçilik ve termin teklifi alabilirsiniz.</p>
+                <p class="small mb-3 text-white">İmalat veya parça çizimlerinizi kurumsal hattımıza ulaştırarak anında işçilik og termin teklifi alabilirsiniz.</p>
                 <a href="iletisim.html" class="btn btn-custom-gold text-dark fw-bold px-4">Çizim Gönder & Teklif Al</a>
             </div>
         </div>

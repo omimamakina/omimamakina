@@ -10,15 +10,14 @@
     <style>
         :root { 
             --primary-color: #ffc107; 
-            --dark-bg: #222222; /* Açık arka plan */
+            --dark-bg: #222222; 
             --card-bg: #2d2d2d; 
             --text-readable: #ffffff; 
         }
         body { font-family: 'Segoe UI', Roboto, sans-serif; color: #ffffff; background-color: var(--dark-bg); }
-        .navbar { background-color: #151515 !important; border-bottom: 1px solid #3d3d3d; }
-        .navbar-brand { font-weight: 700; color: #ffffff !important; }
-        .navbar-brand span { color: var(--primary-color); }
-        .nav-link { color: #dddddd !important; }
+        .navbar { background-color: #151515 !important; border-bottom: 1px solid #3d3d3d; padding: 10px 0; }
+        .navbar-logo { height: 50px; width: auto; max-width: 100%; object-fit: contain; }
+        .nav-link { color: #dddddd !important; font-weight: 500; }
         .nav-link.active, .nav-link:hover { color: var(--primary-color) !important; }
         
         .slogan-bar { background-color: #1a1a1a; border-bottom: 1px solid #3d3d3d; padding: 8px 0; font-size: 0.95rem; letter-spacing: 1px; color: var(--primary-color); font-weight: 500; }
@@ -29,8 +28,6 @@
         .card-service-grid:hover { border-color: var(--primary-color); box-shadow: 0 0 15px rgba(255, 193, 7, 0.15); }
         .card-service-grid h2 { color: var(--primary-color); font-size: 1.25rem; font-weight: 600; }
         .card-service-grid .service-text { color: #e0e0e0 !important; }
-        
-        /* Tüm ikonlar altın sarısı yapıldı */
         .card-service-grid i { color: var(--primary-color) !important; }
         
         .btn-custom-gold { background-color: var(--primary-color); color: #151515; font-weight: 700; border: none; transition: all 0.3s ease; }
@@ -44,15 +41,16 @@
 </head>
 <body>
 
-    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
         <div class="container">
-            <a class="navbar-brand text-uppercase" href="index.html">OMİMA <span>MAKİNA</span></a>
+            <a class="navbar-brand" href="index.html">
+                <img src="OMİMA kopya.webp" alt="Omima Makina Logo" class="navbar-logo">
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="mainNav">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
                     <li class="nav-item"><a class="nav-link" href="index.html">Ana Sayfa</a></li>
                     <li class="nav-item"><a class="nav-link" href="hakkimizda.html">Hakkımızda</a></li>
                     <li class="nav-item"><a class="nav-link active" href="hizmetler.html">Hizmetlerimiz</a></li>
@@ -62,14 +60,12 @@
         </div>
     </nav>
 
-    <!-- Slogan Şeridi -->
     <div class="slogan-bar text-center text-uppercase">
         <div class="container">
             <i class="bi bi-gear-fill me-2"></i> Üretiyor, geliştiriyor, çözüm sunuyoruz.
         </div>
     </div>
 
-    <!-- Başlık -->
     <div class="page-header text-center">
         <div class="container">
             <h1 class="fw-bold text-white">Hizmetlerimiz</h1>
@@ -77,12 +73,10 @@
         </div>
     </div>
 
-    <!-- Hizmetler Grid Sistemi -->
     <section class="py-5">
         <div class="container">
             <div class="row g-4">
                 
-                <!-- 1. Hizmet -->
                 <div class="col-md-4">
                     <div class="card-service-grid p-4 h-100">
                         <div class="mb-3"><i class="bi bi-tools fs-3"></i></div>
@@ -91,7 +85,6 @@
                     </div>
                 </div>
 
-                <!-- 2. Hizmet -->
                 <div class="col-md-4">
                     <div class="card-service-grid p-4 h-100">
                         <div class="mb-3"><i class="bi bi-wrench-adjustable fs-3"></i></div>
@@ -100,7 +93,6 @@
                     </div>
                 </div>
 
-                <!-- 3. Hizmet -->
                 <div class="col-md-4">
                     <div class="card-service-grid p-4 h-100">
                         <div class="mb-3"><i class="bi bi-droplet-half fs-3"></i></div>
@@ -109,7 +101,6 @@
                     </div>
                 </div>
 
-                <!-- 4. Hizmet -->
                 <div class="col-md-4">
                     <div class="card-service-grid p-4 h-100">
                         <div class="mb-3"><i class="bi bi-nut fs-3"></i></div>
@@ -118,7 +109,6 @@
                     </div>
                 </div>
 
-                <!-- 5. Hizmet -->
                 <div class="col-md-4">
                     <div class="card-service-grid p-4 h-100">
                         <div class="mb-3"><i class="bi bi-lightning-charge fs-3"></i></div>
@@ -127,7 +117,6 @@
                     </div>
                 </div>
 
-                <!-- 6. Hizmet -->
                 <div class="col-md-4">
                     <div class="card-service-grid p-4 h-100" style="border-color: var(--primary-color);">
                         <div class="mb-3"><i class="bi bi-cpu fs-3"></i></div>
@@ -138,7 +127,6 @@
 
             </div>
 
-            <!-- İstek Bölümü -->
             <div class="text-center mt-5 p-4 rounded border" style="background-color: var(--card-bg); border-color: #444444 !important;">
                 <h3 class="h5 fw-bold text-white mb-3">Elinizde Teknik Çizim mi Var?</h3>
                 <p class="small mb-3 text-white">İmalat veya parça çizimlerinizi kurumsal hattımıza ulaştırarak anında işçilik ve termin teklifi alabilirsiniz.</p>
@@ -147,7 +135,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer pt-5 pb-4">
         <div class="container">
             <div class="row g-4">
@@ -172,13 +159,12 @@
             </div>
             <hr class="border-secondary my-4">
             <div class="row small text-center text-md-start">
-                <div class="col-md-6 text-white">&copy; 2026 Omima Makina. Tüm Hakları Saklıdır.</div>
+                <div class="col-md-6 text-white">© 2026 Omima Makina. Tüm Hakları Saklıdır.</div>
                 <div class="col-md-6 text-md-end" style="color: var(--primary-color);">Bursa Fason Makina ve Yedek Parça İmalatı</div>
             </div>
         </div>
     </footer>
 
-    <!-- WhatsApp -->
     <a href="https://wa.me/905356860848?text=Merhaba,%20hizmetleriniz%20hakkında%20teknik%20bir%20detay%20danışmak%20istiyorum." class="whatsapp-btn" target="_blank">
         <i class="bi bi-whatsapp me-2"></i>WhatsApp'tan Yazın
     </a>

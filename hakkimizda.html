@@ -10,15 +10,14 @@
     <style>
         :root { 
             --primary-color: #ffc107; 
-            --dark-bg: #222222; /* Açık arka plan */
+            --dark-bg: #222222; 
             --card-bg: #2d2d2d; 
             --text-readable: #ffffff;
         }
         body { font-family: 'Segoe UI', Roboto, sans-serif; color: #ffffff; background-color: var(--dark-bg); }
-        .navbar { background-color: #151515 !important; border-bottom: 1px solid #3d3d3d; }
-        .navbar-brand { font-weight: 700; color: #ffffff !important; }
-        .navbar-brand span { color: var(--primary-color); }
-        .nav-link { color: #dddddd !important; }
+        .navbar { background-color: #151515 !important; border-bottom: 1px solid #3d3d3d; padding: 10px 0; }
+        .navbar-logo { height: 50px; width: auto; max-width: 100%; object-fit: contain; }
+        .nav-link { color: #dddddd !important; font-weight: 500; }
         .nav-link.active, .nav-link:hover { color: var(--primary-color) !important; }
         
         .slogan-bar { background-color: #1a1a1a; border-bottom: 1px solid #3d3d3d; padding: 8px 0; font-size: 0.95rem; letter-spacing: 1px; color: var(--primary-color); font-weight: 500; }
@@ -34,15 +33,16 @@
 </head>
 <body>
 
-    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
         <div class="container">
-            <a class="navbar-brand text-uppercase" href="index.html">OMİMA <span>MAKİNA</span></a>
+            <a class="navbar-brand" href="index.html">
+                <img src="OMİMA kopya.webp" alt="Omima Makina Logo" class="navbar-logo">
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="mainNav">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
                     <li class="nav-item"><a class="nav-link" href="index.html">Ana Sayfa</a></li>
                     <li class="nav-item"><a class="nav-link active" href="hakkimizda.html">Hakkımızda</a></li>
                     <li class="nav-item"><a class="nav-link" href="hizmetler.html">Hizmetlerimiz</a></li>
@@ -52,14 +52,12 @@
         </div>
     </nav>
 
-    <!-- Slogan Şeridi -->
     <div class="slogan-bar text-center text-uppercase">
         <div class="container">
             <i class="bi bi-gear-fill me-2"></i> Üretiyor, geliştiriyor, çözüm sunuyoruz.
         </div>
     </div>
 
-    <!-- Başlık -->
     <div class="page-header text-center">
         <div class="container">
             <h1 class="fw-bold text-white">Hakkımızda</h1>
@@ -67,13 +65,12 @@
         </div>
     </div>
 
-    <!-- İçerik -->
     <section class="py-5">
         <div class="container">
             <div class="row g-5 align-items-center">
                 <div class="col-md-12">
                     <h2 class="fw-bold text-white mb-4">Biz Kimiz, Nasıl Çalışıyoruz?</h2>
-                    <p class="lead about-text">Omima Makina olarak, hazır veya seri üretim ürün satışı yapmıyoruz. Bizim işimiz tamamen endüstriyel tesislerin, mühendislerin ve firmaların kişiye veya projeye özel makina imalatı ile fason parça üretimi taleplerine profesyonel çözümler üretmektir.</p>
+                    <p class="lead about-text">Omima Makina olarak, hazır veya seri üretim ürün satışı yapmıyoruz. Bizim işimiz tamamen endüstriyel tesislerin, mühendislerin ve firmaların **kişiye veya projeye özel makina imalatı ile fason parça üretimi** taleplerine profesyonel çözümler üretmetir.</p>
                     
                     <p class="about-text">Bursa Kayapa'daki atölyemizde, hidrolik sistemlerin tasarlanmasından mekanik montaj hatlarına kadar geniş bir teknik spektrumda hizmet veriyoruz. Mühendislik araçlarıyla hazırlanan veya tarafımıza iletilen teknik resimleri titizlikle inceliyor, üretim süreçlerindeki hata paylarını sıfıra indirmeyi hedefliyoruz.</p>
                     
@@ -96,7 +93,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer pt-5 pb-4">
         <div class="container">
             <div class="row g-4">
@@ -121,13 +117,12 @@
             </div>
             <hr class="border-secondary my-4">
             <div class="row small text-center text-md-start">
-                <div class="col-md-6 text-white">&copy; 2026 Omima Makina. Tüm Hakları Saklıdır.</div>
+                <div class="col-md-6 text-white">© 2026 Omima Makina. Tüm Hakları Saklıdır.</div>
                 <div class="col-md-6 text-md-end" style="color: var(--primary-color);">Bursa Fason Makina ve Yedek Parça İmalatı</div>
             </div>
         </div>
     </footer>
 
-    <!-- WhatsApp -->
     <a href="https://wa.me/905356860848?text=Merhaba,%20hakkınızda%20bilgi%20aldım%20ve%20bir%20proje%20için%20görüşmek%20istiyorum." class="whatsapp-btn" target="_blank">
         <i class="bi bi-whatsapp me-2"></i>WhatsApp'tan Yazın
     </a>

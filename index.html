@@ -14,18 +14,31 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     
     <style>
-        :root { --primary-color: #0d6efd; --dark-color: #1e293b; }
-        body { font-family: 'Segoe UI', Roboto, sans-serif; color: #334155; background-color: #f8fafc; }
-        .navbar-brand { font-weight: 700; letter-spacing: 1px; }
-        .hero-section { background: linear-gradient(rgba(30, 41, 59, 0.85), rgba(30, 41, 59, 0.95)), url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover; padding: 120px 0; color: #ffffff; }
-        .card-service { border: none; border-bottom: 4px solid transparent; transition: all 0.3s ease; }
-        .card-service:hover { border-bottom: 4px solid var(--primary-color); transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
-        .footer { background-color: var(--dark-color); color: #94a3b8; }
-        .whatsapp-btn { position: fixed; bottom: 20px; right: 20px; z-index: 1000; background-color: #25d366; color: white; border-radius: 50px; padding: 12px 24px; font-weight: bold; text-decoration: none; box-shadow: 0 4px 10px rgba(0,0,0,0.3); transition: all 0.3s ease; }
+        :root { 
+            --primary-color: #ffc107; 
+            --dark-bg: #121212; 
+            --card-bg: #1e1e1e;
+            --text-muted: #a0a0a0;
+        }
+        body { font-family: 'Segoe UI', Roboto, sans-serif; color: #e0e0e0; background-color: var(--dark-bg); }
+        .navbar { background-color: #000000 !important; border-bottom: 1px solid #2d2d2d; }
+        .navbar-brand { font-weight: 700; letter-spacing: 1px; color: #ffffff !important; }
+        .navbar-brand span { color: var(--primary-color); }
+        .nav-link { color: #cccccc !important; }
+        .nav-link.active, .nav-link:hover { color: var(--primary-color) !important; }
+        
+        /* Slogan Şeridi */
+        .slogan-bar { background-color: #1a1a1a; border-bottom: 1px solid #2d2d2d; padding: 8px 0; font-size: 0.95rem; letter-spacing: 1px; color: var(--primary-color); font-weight: 500; }
+        
+        .hero-section { background: linear-gradient(rgba(18, 18, 18, 0.8), rgba(18, 18, 18, 0.95)), url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover; padding: 120px 0; }
+        .card-service { background-color: var(--card-bg); border: 1px solid #2d2d2d; transition: all 0.3s ease; height: 100%; }
+        .card-service:hover { border-color: var(--primary-color); transform: translateY(-5px); }
+        .card-service h3 { color: var(--primary-color); }
+        .footer { background-color: #0a0a0a; color: var(--text-muted); border-top: 1px solid #2d2d2d; }
+        .whatsapp-btn { position: fixed; bottom: 20px; right: 20px; z-index: 1000; background-color: #25d366; color: white; border-radius: 50px; padding: 12px 24px; font-weight: bold; text-decoration: none; box-shadow: 0 4px 10px rgba(0,0,0,0.5); transition: all 0.3s ease; }
         .whatsapp-btn:hover { background-color: #20ba5a; color: white; transform: scale(1.05); }
     </style>
 
-    <!-- Yapay Zeka ve Arama Motoru Şeması (LocalBusiness) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -52,9 +65,9 @@
 <body>
 
     <!-- Üst Menü -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
         <div class="container">
-            <a class="navbar-brand text-uppercase text-white" href="index.html">OMİMA <span class="text-primary">MAKİNA</span></a>
+            <a class="navbar-brand text-uppercase" href="index.html">OMİMA <span>MAKİNA</span></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -69,15 +82,22 @@
         </div>
     </nav>
 
+    <!-- Profesyonel Slogan Şeridi -->
+    <div class="slogan-bar text-center text-uppercase">
+        <div class="container">
+            <i class="bi bi-gear-fill me-2 animate-spin"></i> Üretiyor, geliştiriyor, çözüm sunuyoruz.
+        </div>
+    </div>
+
     <!-- Hero -->
     <header class="hero-section text-center text-md-start">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-8">
-                    <h1 class="display-4 fw-bold mb-3">Bursa Hidrolik Makina İmalatı ve Fason Parça Üretimi</h1>
+                    <h1 class="display-4 fw-bold mb-3 text-white">Bursa Hidrolik Makina İmalatı ve Fason Parça Üretimi</h1>
                     <p class="lead mb-4 text-light">Flaş pazarlama stratejileri değil, saf mühendislik ve işçilik sunuyoruz. Kayapa Sanayi Bölgesi'nde kişiye ve firmaya özel makina tasarımı, hidrolik sistem kurulumu ve yüksek hassasiyetli fason talaşlı imalat çözümleri.</p>
                     <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-md-start">
-                        <a href="iletisim.html" class="btn btn-primary btn-lg px-4 py-2"><i class="bi bi-file-earmark-text me-2"></i>Teklif İsteyin</a>
+                        <a href="iletisim.html" class="btn btn-primary btn-lg px-4 py-2 text-dark fw-bold"><i class="bi bi-file-earmark-text me-2"></i>Teklif İsteyin</a>
                         <a href="tel:+905356860848" class="btn btn-outline-light btn-lg px-4 py-2"><i class="bi bi-telephone me-2"></i>Teknik Bilgi Al</a>
                     </div>
                 </div>
@@ -85,48 +105,33 @@
         </div>
     </header>
 
-    <!-- Özellikler -->
-    <section class="py-5 bg-white">
-        <div class="container">
-            <div class="row text-center g-4 dz-row">
-                <div class="col-md-6">
-                    <div class="p-3">
-                        <i class="bi bi-gear-wide-connected text-primary display-4 mb-3 d-block"></i>
-                        <h3 class="h5 fw-bold text-dark">Projeye Özel Tasarım ve Montaj</h3>
-                        <p class="text-muted small">İhtiyacınız olan makina ya da sistemi sıfırdan projelendiriyor, tüm teknik detaylarına kadar CAD ortamında kusursuzca hazırlayıp montajını gerçekleştiriyoruz.</p>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="p-3">
-                        <i class="bi bi-droplet-half text-primary display-4 mb-3 d-block"></i>
-                        <h3 class="h5 fw-bold text-dark">Hidrolik Sistem Uzmanlığı</h3>
-                        <p class="text-muted small">Güç ünitelerinden silindirlere, hidrolik hat tasarımlarından endüstriyel uygulamalara kadar her aşamada teknik üretim gerçekleştiriyoruz.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Özet -->
+    <!-- Özet Kabiliyetler -->
     <section class="py-5">
         <div class="container">
             <div class="text-center mb-5">
-                <span class="text-primary fw-bold text-uppercase tracking-wider">Üretim Kabiliyetlerimiz</span>
-                <h2 class="fw-bold text-dark mt-2">Neler Yapıyoruz?</h2>
-                <p class="text-muted mx-auto" style="max-width: 600px;">Doğrudan seri üretim raf satışı yapmıyor; tamamen sizin teknik taleplerinize, çizimlerinize ve endüstriyel ihtiyaçlarınıza özel butik çözümler geliştiriyoruz.</p>
+                <span class="text-primary fw-bold text-uppercase tracking-wider">Endüstriyel Çözümler</span>
+                <h2 class="fw-bold text-white mt-2">Neler Yapıyoruz?</h2>
+                <p class="text-muted mx-auto" style="max-width: 600px;">Görsel temamıza ve üretim disiplinimize sadık kalarak, tüm endüstriyel parça, mekanik bakım, hidrolik sistem ve proje geliştirme ihtiyaçlarınızda tam kapasite çalışıyoruz.</p>
             </div>
-            <div class="row g-4 justify-content-center">
-                <div class="col-md-6">
-                    <div class="card h-100 card-service shadow-sm p-4">
-                        <h3 class="h5 fw-bold mb-3">Hidrolik Makina İmalatı</h3>
-                        <p class="text-muted small mb-3">Endüstriyel presler, hidrolik güç paketleri ve özel kaldırma/iletme mekanizmaları tasarımı ve imalatı.</p>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card card-service shadow-sm p-4">
+                        <h3 class="h5 fw-bold mb-3">Torna & Freze Talaşlı İmalat</h3>
+                        <p class="text-muted small mb-3">Her türlü çelik, paslanmaz, alüminyum ve özel alaşımlarda yüksek hassasiyetli talaşlı imalat yapmaktayız.</p>
                         <a href="hizmetler.html" class="text-primary text-decoration-none small fw-bold">Detayları Gör <i class="bi bi-arrow-right"></i></a>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <div class="card h-100 card-service shadow-sm p-4">
-                        <h3 class="h5 fw-bold mb-3">Fason Parça Üretimi & Talaşlı İmalat</h3>
-                        <p class="text-muted small mb-3">Metal, çelik ve endüstriyel plastik hammaddelerin teknik resme uygun olarak üniversal ve hassas tezgahlarda fason işlenmesi.</p>
+                <div class="col-md-4">
+                    <div class="card card-service shadow-sm p-4">
+                        <h3 class="h5 fw-bold mb-3">Mekanik Bakım & Onarım</h3>
+                        <p class="text-muted small mb-3">Endüstriyel makinelerin arıza tespiti, bakım ve revizyon işlemleri uzman ekibimiz tarafından yapılır.</p>
+                        <a href="hizmetler.html" class="text-primary text-decoration-none small fw-bold">Detayları Gör <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card card-service shadow-sm p-4">
+                        <h3 class="h5 fw-bold mb-3">Hidrolik & Pnömatik Sistemler</h3>
+                        <p class="text-muted small mb-3">Hidrolik güç üniteleri, pnömatik kontrol sistemleri, hortum bağlantıları ve devre tasarımları.</p>
                         <a href="hizmetler.html" class="text-primary text-decoration-none small fw-bold">Detayları Gör <i class="bi bi-arrow-right"></i></a>
                     </div>
                 </div>

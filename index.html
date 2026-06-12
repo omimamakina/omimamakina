@@ -18,9 +18,10 @@
             --primary-color: #ffc107; 
             --dark-bg: #121212; 
             --card-bg: #1e1e1e;
-            --text-muted: #a0a0a0;
+            --text-light: #e0e0e0;
+            --text-readable: #b0b0b0; /* Görünmeyen yazılar için yüksek kontrastlı açık gri */
         }
-        body { font-family: 'Segoe UI', Roboto, sans-serif; color: #e0e0e0; background-color: var(--dark-bg); }
+        body { font-family: 'Segoe UI', Roboto, sans-serif; color: var(--text-light); background-color: var(--dark-bg); }
         .navbar { background-color: #000000 !important; border-bottom: 1px solid #2d2d2d; }
         .navbar-brand { font-weight: 700; letter-spacing: 1px; color: #ffffff !important; }
         .navbar-brand span { color: var(--primary-color); }
@@ -31,10 +32,23 @@
         .slogan-bar { background-color: #1a1a1a; border-bottom: 1px solid #2d2d2d; padding: 8px 0; font-size: 0.95rem; letter-spacing: 1px; color: var(--primary-color); font-weight: 500; }
         
         .hero-section { background: linear-gradient(rgba(18, 18, 18, 0.8), rgba(18, 18, 18, 0.95)), url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover; padding: 120px 0; }
+        
+        /* Özelleştirilmiş Butonlar (Mavi Kaldırıldı) */
+        .btn-custom-primary { background-color: var(--primary-color); color: #121212; font-weight: 700; border: none; transition: all 0.3s ease; }
+        .btn-custom-primary:hover { background-color: #e0a800; color: #121212; transform: translateY(-2px); }
+        
         .card-service { background-color: var(--card-bg); border: 1px solid #2d2d2d; transition: all 0.3s ease; height: 100%; }
         .card-service:hover { border-color: var(--primary-color); transform: translateY(-5px); }
         .card-service h3 { color: var(--primary-color); }
-        .footer { background-color: #0a0a0a; color: var(--text-muted); border-top: 1px solid #2d2d2d; }
+        .card-service .service-desc { color: var(--text-readable) !important; } /* Kart içi görünmeyen yazılar */
+        
+        .section-subtitle { color: var(--text-readable) !important; }
+        
+        .footer { background-color: #0a0a0a; color: var(--text-readable); border-top: 1px solid #2d2d2d; }
+        .footer a { color: var(--text-readable) !important; transition: color 0.3s; }
+        .footer a:hover { color: var(--primary-color) !important; }
+        .footer-text-white { color: #ffffff !important; }
+        
         .whatsapp-btn { position: fixed; bottom: 20px; right: 20px; z-index: 1000; background-color: #25d366; color: white; border-radius: 50px; padding: 12px 24px; font-weight: bold; text-decoration: none; box-shadow: 0 4px 10px rgba(0,0,0,0.5); transition: all 0.3s ease; }
         .whatsapp-btn:hover { background-color: #20ba5a; color: white; transform: scale(1.05); }
     </style>
@@ -82,10 +96,10 @@
         </div>
     </nav>
 
-    <!-- Profesyonel Slogan Şeridi -->
+    <!-- Slogan Şeridi -->
     <div class="slogan-bar text-center text-uppercase">
         <div class="container">
-            <i class="bi bi-gear-fill me-2 animate-spin"></i> Üretiyor, geliştiriyor, çözüm sunuyoruz.
+            <i class="bi bi-gear-fill me-2"></i> Üretiyor, geliştiriyor, çözüm sunuyoruz.
         </div>
     </div>
 
@@ -97,7 +111,8 @@
                     <h1 class="display-4 fw-bold mb-3 text-white">Bursa Hidrolik Makina İmalatı ve Fason Parça Üretimi</h1>
                     <p class="lead mb-4 text-light">Flaş pazarlama stratejileri değil, saf mühendislik ve işçilik sunuyoruz. Kayapa Sanayi Bölgesi'nde kişiye ve firmaya özel makina tasarımı, hidrolik sistem kurulumu ve yüksek hassasiyetli fason talaşlı imalat çözümleri.</p>
                     <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-md-start">
-                        <a href="iletisim.html" class="btn btn-primary btn-lg px-4 py-2 text-dark fw-bold"><i class="bi bi-file-earmark-text me-2"></i>Teklif İsteyin</a>
+                        <!-- Mavi Buton Altın Sarısı Yapıldı -->
+                        <a href="iletisim.html" class="btn btn-custom-primary btn-lg px-4 py-2"><i class="bi bi-file-earmark-text me-2"></i>Teklif İsteyin</a>
                         <a href="tel:+905356860848" class="btn btn-outline-light btn-lg px-4 py-2"><i class="bi bi-telephone me-2"></i>Teknik Bilgi Al</a>
                     </div>
                 </div>
@@ -111,27 +126,28 @@
             <div class="text-center mb-5">
                 <span class="text-primary fw-bold text-uppercase tracking-wider">Endüstriyel Çözümler</span>
                 <h2 class="fw-bold text-white mt-2">Neler Yapıyoruz?</h2>
-                <p class="text-muted mx-auto" style="max-width: 600px;">Görsel temamıza ve üretim disiplinimize sadık kalarak, tüm endüstriyel parça, mekanik bakım, hidrolik sistem ve proje geliştirme ihtiyaçlarınızda tam kapasite çalışıyoruz.</p>
+                <p class="section-subtitle mx-auto" style="max-width: 600px;">Görsel temamıza ve üretim disiplinimize sadık kalarak, tüm endüstriyel parça, mekanik bakım, hidrolik sistem ve proje geliştirme ihtiyaçlarınızda tam kapasite çalışıyoruz.</p>
             </div>
             <div class="row g-4">
                 <div class="col-md-4">
                     <div class="card card-service shadow-sm p-4">
                         <h3 class="h5 fw-bold mb-3">Torna & Freze Talaşlı İmalat</h3>
-                        <p class="text-muted small mb-3">Her türlü çelik, paslanmaz, alüminyum ve özel alaşımlarda yüksek hassasiyetli talaşlı imalat yapmaktayız.</p>
+                        <p class="service-desc small mb-3">Her türlü çelik, paslanmaz, alüminyum ve özel alaşımlarda yüksek hassasiyetli talaşlı imalat yapmaktayız.</p>
+                        <!-- Mavi Link Sarı Yapıldı -->
                         <a href="hizmetler.html" class="text-primary text-decoration-none small fw-bold">Detayları Gör <i class="bi bi-arrow-right"></i></a>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card card-service shadow-sm p-4">
                         <h3 class="h5 fw-bold mb-3">Mekanik Bakım & Onarım</h3>
-                        <p class="text-muted small mb-3">Endüstriyel makinelerin arıza tespiti, bakım ve revizyon işlemleri uzman ekibimiz tarafından yapılır.</p>
+                        <p class="service-desc small mb-3">Endüstriyel makinelerin arıza tespiti, bakım ve revizyon işlemleri uzman ekibimiz tarafından yapılır.</p>
                         <a href="hizmetler.html" class="text-primary text-decoration-none small fw-bold">Detayları Gör <i class="bi bi-arrow-right"></i></a>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card card-service shadow-sm p-4">
                         <h3 class="h5 fw-bold mb-3">Hidrolik & Pnömatik Sistemler</h3>
-                        <p class="text-muted small mb-3">Hidrolik güç üniteleri, pnömatik kontrol sistemleri, hortum bağlantıları ve devre tasarımları.</p>
+                        <p class="service-desc small mb-3">Hidrolik güç üniteleri, pnömatik kontrol sistemleri, hortum bağlantıları ve devre tasarımları.</p>
                         <a href="hizmetler.html" class="text-primary text-decoration-none small fw-bold">Detayları Gör <i class="bi bi-arrow-right"></i></a>
                     </div>
                 </div>
@@ -145,27 +161,27 @@
             <div class="row g-4">
                 <div class="col-md-4">
                     <h4 class="text-white h5 fw-bold mb-3">OMİMA MAKİNA</h4>
-                    <p class="small">Bursa Kayapa merkezli firmamız; özel hidrolik makina imalatı ve teknik fason işçilik sektöründe güvenilir iş ortağınızdır.</p>
+                    <p class="small footer-text-white">Bursa Kayapa merkezli firmamız; özel hidrolik makina imalatı ve teknik fason işçilik sektöründe güvenilir iş ortağınızdır.</p>
                 </div>
                 <div class="col-md-4">
                     <h4 class="text-white h5 fw-bold mb-3">Hızlı Bağlantılar</h4>
                     <ul class="list-unstyled small">
-                        <li class="mb-2"><a href="hakkimizda.html" class="text-decoration-none text-muted">Hakkımızda</a></li>
-                        <li class="mb-2"><a href="hizmetler.html" class="text-decoration-none text-muted">Hizmetlerimiz</a></li>
-                        <li class="mb-2"><a href="iletisim.html" class="text-decoration-none text-muted">İletişim & Teklif</a></li>
+                        <li class="mb-2"><a href="hakkimizda.html" class="text-decoration-none footer-text-white">Hakkımızda</a></li>
+                        <li class="mb-2"><a href="hizmetler.html" class="text-decoration-none footer-text-white">Hizmetlerimiz</a></li>
+                        <li class="mb-2"><a href="iletisim.html" class="text-decoration-none footer-text-white">İletişim & Teklif</a></li>
                     </ul>
                 </div>
                 <div class="col-md-4">
                     <h4 class="text-white h5 fw-bold mb-3">İletişim Bilgileri</h4>
-                    <p class="small mb-2"><i class="bi bi-geo-alt me-2"></i>Kayapa, 147. (Eski 530.) Sk. No:3 Nilüfer / BURSA</p>
-                    <p class="small mb-2"><i class="bi bi-telephone me-2"></i><a href="tel:+905356860848" class="text-decoration-none text-muted">0535 686 08 48</a></p>
-                    <p class="small mb-0"><i class="bi bi-envelope me-2"></i><a href="mailto:info@omimamakina.com" class="text-decoration-none text-muted">info@omimamakina.com</a></p>
+                    <p class="small mb-2 footer-text-white"><i class="bi bi-geo-alt text-primary me-2"></i>Kayapa, 147. (Eski 530.) Sk. No:3 Nilüfer / BURSA</p>
+                    <p class="small mb-2 footer-text-white"><i class="bi bi-telephone text-primary me-2"></i><a href="tel:+905356860848" class="text-decoration-none footer-text-white">0535 686 08 48</a></p>
+                    <p class="small mb-0 footer-text-white"><i class="bi bi-envelope text-primary me-2"></i><a href="mailto:info@omimamakina.com" class="text-decoration-none footer-text-white">info@omimamakina.com</a></p>
                 </div>
             </div>
             <hr class="border-secondary my-4">
             <div class="row small text-center text-md-start">
-                <div class="col-md-6">&copy; 2026 Omima Makina. Tüm Hakları Saklıdır.</div>
-                <div class="col-md-6 text-md-end text-muted">Bursa Fason Makina ve Yedek Parça İmalatı</div>
+                <div class="col-md-6 text-white">&copy; 2026 Omima Makina. Tüm Hakları Saklıdır.</div>
+                <div class="col-md-6 text-md-end text-primary">Bursa Fason Makina ve Yedek Parça İmalatı</div>
             </div>
         </div>
     </footer>

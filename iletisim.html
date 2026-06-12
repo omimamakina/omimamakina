@@ -19,8 +19,12 @@
             --text-readable: #ffffff; 
         }
         body { font-family: 'Segoe UI', Roboto, sans-serif; color: #ffffff; background-color: var(--dark-bg); }
-        .navbar { background-color: #151515 !important; border-bottom: 1px solid #3d3d3d; padding: 12px 0; }
-        .navbar-logo { height: 65px; width: auto; max-width: 280px; object-fit: contain; display: block; }
+        
+        /* Navbar Alanı ve Logo Büyütme Ayarları */
+        .navbar { background-color: #151515 !important; border-bottom: 1px solid #3d3d3d; padding: 0 !important; }
+        .navbar-brand { padding-top: 5px !important; padding-bottom: 5px !important; }
+        .navbar-logo { height: 110px !important; width: auto !important; max-width: 380px !important; object-fit: contain; display: block; }
+        
         .nav-link { color: #dddddd !important; font-weight: 500; }
         .nav-link.active, .nav-link:hover { color: var(--primary-color) !important; }
         
@@ -41,7 +45,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
         <div class="container">
-            <!-- SAYFA İÇİ ANA LOGO (BÜYÜTÜLDÜ) -->
+            <!-- SAYFA İÇİ ANA LOGO (MAKSİMUM BOYUTTA NETLEŞTİRİLDİ) -->
             <a class="navbar-brand" href="index.html">
                 <img src="OMİMA kopya.webp" alt="Omima Makina Logo" class="navbar-logo">
             </a>
@@ -119,7 +123,7 @@
                 <div class="col-lg-7">
                     <div class="p-4 rounded h-100" style="background-color: var(--card-bg); border: 1px solid #444444;">
                         <h2 class="h4 fw-bold text-white mb-3">Hızlı Teknik Teklif Hattı</h2>
-                        <p class="small contact-detail-text mb-4">Sitemiz arama motoru hızı ve bot koruması için yalın tutulmuştur. Çizim veya teknik detay göndermek için doğrudan kurumsal WhatsApp hattımızı kullanabilirsiniz.</p>
+                        <p class="small contact-detail-text mb-4">Sitemiz arama motoru hızı og bot koruması için yalın tutulmuştur. Çizim veya teknik detay göndermek için doğrudan kurumsal WhatsApp hattımızı kullanabilirsiniz.</p>
                         
                         <div class="p-4 rounded text-center" style="background-color: #1a1a1a; border: 1px solid #444444;">
                             <i class="bi bi-whatsapp text-success display-4 mb-3 d-block"></i>

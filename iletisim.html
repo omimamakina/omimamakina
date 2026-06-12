@@ -8,20 +8,31 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <style>
-        :root { --primary-color: #0d6efd; --dark-color: #1e293b; }
-        body { font-family: 'Segoe UI', Roboto, sans-serif; color: #334155; background-color: #f8fafc; }
-        .navbar-brand { font-weight: 700; letter-spacing: 1px; }
-        .page-header { background: linear-gradient(rgba(30, 41, 59, 0.9), rgba(30, 41, 59, 0.95)); padding: 60px 0; color: #ffffff; }
-        .footer { background-color: var(--dark-color); color: #94a3b8; }
-        .whatsapp-btn { position: fixed; bottom: 20px; right: 20px; z-index: 1000; background-color: #25d366; color: white; border-radius: 50px; padding: 12px 24px; font-weight: bold; text-decoration: none; box-shadow: 0 4px 10px rgba(0,0,0,0.3); transition: all 0.3s ease; }
+        :root { 
+            --primary-color: #ffc107; 
+            --dark-bg: #121212; 
+            --card-bg: #1e1e1e;
+        }
+        body { font-family: 'Segoe UI', Roboto, sans-serif; color: #e0e0e0; background-color: var(--dark-bg); }
+        .navbar { background-color: #000000 !important; border-bottom: 1px solid #2d2d2d; }
+        .navbar-brand { font-weight: 700; color: #ffffff !important; }
+        .navbar-brand span { color: var(--primary-color); }
+        .nav-link { color: #cccccc !important; }
+        .nav-link.active, .nav-link:hover { color: var(--primary-color) !important; }
+        
+        .slogan-bar { background-color: #1a1a1a; border-bottom: 1px solid #2d2d2d; padding: 8px 0; font-size: 0.95rem; letter-spacing: 1px; color: var(--primary-color); font-weight: 500; }
+        
+        .page-header { background: linear-gradient(rgba(18, 18, 18, 0.9), rgba(18, 18, 18, 0.95)); padding: 60px 0; border-bottom: 1px solid #2d2d2d; }
+        .footer { background-color: #0a0a0a; color: #a0a0a0; border-top: 1px solid #2d2d2d; }
+        .whatsapp-btn { position: fixed; bottom: 20px; right: 20px; z-index: 1000; background-color: #25d366; color: white; border-radius: 50px; padding: 12px 24px; font-weight: bold; text-decoration: none; box-shadow: 0 4px 10px rgba(0,0,0,0.5); transition: all 0.3s ease; }
     </style>
 </head>
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
         <div class="container">
-            <a class="navbar-brand text-uppercase text-white" href="index.html">OMİMA <span class="text-primary">MAKİNA</span></a>
+            <a class="navbar-brand text-uppercase" href="index.html">OMİMA <span>MAKİNA</span></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -36,10 +47,17 @@
         </div>
     </nav>
 
+    <!-- Slogan Şeridi -->
+    <div class="slogan-bar text-center text-uppercase">
+        <div class="container">
+            <i class="bi bi-gear-fill me-2"></i> Üretiyor, geliştiriyor, çözüm sunuyoruz.
+        </div>
+    </div>
+
     <!-- Başlık -->
     <div class="page-header text-center">
         <div class="container">
-            <h1 class="fw-bold">Bizimle İletişime Geçin</h1>
+            <h1 class="fw-bold text-white">Bizimle İletişime Geçin</h1>
             <p class="lead text-muted mb-0">Özel imalat ve fason parça projeleriniz için teknik destek hatlarımız.</p>
         </div>
     </div>
@@ -49,37 +67,37 @@
         <div class="container">
             <div class="row g-4">
                 <div class="col-lg-5">
-                    <div class="p-4 bg-white rounded shadow-sm h-100">
-                        <h2 class="h4 fw-bold text-dark mb-4">Kurumsal Bilgiler</h2>
+                    <div class="p-4 rounded h-100" style="background-color: var(--card-bg); border: 1px solid #2d2d2d;">
+                        <h2 class="h4 fw-bold text-white mb-4">Kurumsal Bilgiler</h2>
                         
                         <div class="d-flex mb-4">
                             <i class="bi bi-geo-alt text-primary fs-4 me-3"></i>
                             <div>
-                                <h3 class="h6 fw-bold mb-1">Atölye Adresi</h3>
-                                <p class="small text-muted mb-0">Kayapa, 147. (530.) Sokak No:3, 16110 Nilüfer / BURSA</p>
+                                <h3 class="h6 fw-bold mb-1 text-white">Atölye Adresi</h3>
+                                <p class="small text-muted mb-0">Kayapa, 147. (Eski 530.) Sokak No:3, 16110 Nilüfer / BURSA</p>
                             </div>
                         </div>
 
                         <div class="d-flex mb-4">
                             <i class="bi bi-telephone text-primary fs-4 me-3"></i>
                             <div>
-                                <h3 class="h6 fw-bold mb-1">Telefon Numarası</h3>
-                                <p class="small mb-0"><a href="tel:+905356860848" class="text-decoration-none text-dark">0535 686 08 48</a></p>
+                                <h3 class="h6 fw-bold mb-1 text-white">Telefon Numarası</h3>
+                                <p class="small mb-0"><a href="tel:+905356860848" class="text-decoration-none text-muted">0535 686 08 48</a></p>
                             </div>
                         </div>
 
                         <div class="d-flex mb-4">
                             <i class="bi bi-envelope text-primary fs-4 me-3"></i>
                             <div>
-                                <h3 class="h6 fw-bold mb-1">E-Posta Adresi</h3>
-                                <p class="small mb-0"><a href="mailto:info@omimamakina.com" class="text-decoration-none text-dark">info@omimamakina.com</a></p>
+                                <h3 class="h6 fw-bold mb-1 text-white">E-Posta Adresi</h3>
+                                <p class="small mb-0"><a href="mailto:info@omimamakina.com" class="text-decoration-none text-muted">info@omimamakina.com</a></p>
                             </div>
                         </div>
 
                         <div class="d-flex mb-3">
                             <i class="bi bi-clock text-primary fs-4 me-3"></i>
                             <div>
-                                <h3 class="h6 fw-bold mb-1">Çalışma Saatleri</h3>
+                                <h3 class="h6 fw-bold mb-1 text-white">Çalışma Saatleri</h3>
                                 <p class="small text-muted mb-0">Pazartesi - Cumartesi: 08:30 - 18:30<br>Pazar: Kapalı</p>
                             </div>
                         </div>
@@ -87,13 +105,13 @@
                 </div>
 
                 <div class="col-lg-7">
-                    <div class="p-4 bg-white rounded shadow-sm h-100">
-                        <h2 class="h4 fw-bold text-dark mb-3">Hızlı Teknik Teklif Hattı</h2>
-                        <p class="small text-muted mb-4">Çizim veya teknik detay göndermek için doğrudan kurumsal WhatsApp hattımızı kullanabilirsiniz.</p>
+                    <div class="p-4 rounded h-100" style="background-color: var(--card-bg); border: 1px solid #2d2d2d;">
+                        <h2 class="h4 fw-bold text-white mb-3">Hızlı Teknik Teklif Hattı</h2>
+                        <p class="small text-muted mb-4">Sitemiz arama motoru hızı ve bot koruması için yalın tutulmuştur. Çizim veya teknik detay göndermek için doğrudan kurumsal WhatsApp hattımızı kullanabilirsiniz.</p>
                         
-                        <div class="bg-light p-4 rounded border text-center">
+                        <div class="p-4 rounded text-center" style="background-color: #121212; border: 1px solid #2d2d2d;">
                             <i class="bi bi-whatsapp text-success display-4 mb-3 d-block"></i>
-                            <h3 class="h5 fw-bold text-dark mb-2">WhatsApp ile Çizim Gönderin</h3>
+                            <h3 class="h5 fw-bold text-white mb-2">WhatsApp ile Çizim Gönderin</h3>
                             <p class="small text-muted px-md-4">Teknik çizimlerinizi veya teknik resimlerinizi cepten doğrudan WhatsApp üzerinden ileterek anında imalat işçilik teklifi alabilirsiniz.</p>
                             <a href="https://wa.me/905356860848?text=Merhaba,%20Kayapa%20atölyeniz%20için%20fason%20imalat%20çizimi%20göndermek%20istiyorum." class="btn btn-success px-4 fw-bold" target="_blank">
                                 <i class="bi bi-whatsapp me-2"></i>Hemen Çizim Paylaş
@@ -103,14 +121,14 @@
                 </div>
             </div>
 
-<!-- Google Harita - Omima Makina Kesin Konum Çözümü -->
-<div class="row mt-4">
-    <div class="col-12">
-        <div class="rounded shadow-sm overflow-hidden bg-white p-2">
-            <iframe src="https://maps.google.com/maps?q=Omima%20Makina,%20Kayapa,%20Nil%C3%BCfer/Bursa&t=&z=15&ie=UTF-8&iwloc=&output=embed" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-    </div>
-</div>
+            <!-- Google Harita - Omima Makina Tescilli Konum -->
+            <div class="row mt-4">
+                <div class="col-12">
+                    <div class="rounded overflow-hidden p-2" style="background-color: var(--card-bg); border: 1px solid #2d2d2d;">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3049.5265561073836!2d28.83868277652758!3d40.18623967147775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f0739f70d5ab9f%3A0x6b80df4fcf50c3d9!2sOmima%20Makina!5e0!3m2!1str!2str!4v1717947200000!5m2!1str!2str" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
